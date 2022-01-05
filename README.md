@@ -1,11 +1,11 @@
 ![](images.jfif)
 
 
-# Hello Microverse
+# Personal portfolio page
 
 > Portfolio.
 
-This project has my wev development works.
+This project has my web development works.
 
 
 ## Built With
