@@ -14,15 +14,16 @@ body {
     background-size: cover;
 }
 
-nav {
+header {
     box-sizing: border-box;
     margin: 0;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.5rem;
     display: flex;
     justify-content: space-between;
     position: absolute;
     top: 0;
     width: 100vw;
+    font-size: 0.8rem;
 }
 
 h1 {
@@ -37,17 +38,26 @@ h1 {
 }
 
 #burger-container .burger-line {
-    border-bottom: 2px solid black;
+    border-bottom: 3px solid black;
     width: 20px;
 }
 
-article {
+section {
     min-height: calc(100vh - 3rem);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
     font-size: 1.3rem;
+}
+
+section li {
+    list-style-type: none;
+}
+
+section li img {
+    width: 3rem;
+    margin: 0.1rem;
 }
 
 h1 span {
@@ -59,6 +69,11 @@ h1 span {
 
 h1 span:last-child {
     color: #36b37e;
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
 }
 
 @media (max-width:550px) {
