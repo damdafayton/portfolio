@@ -54,7 +54,7 @@ section h1 {
 }
 
 section>div {
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 
 section div img {
@@ -131,6 +131,8 @@ h1 span:last-child {
     border: 1px solid rgb(179, 177, 177);
     border-radius: 8px;
     padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .card h1 {
@@ -142,7 +144,7 @@ h1 span:last-child {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 1rem;
+    margin: 0 0.2rem 1.2rem;
 }
 
 .card .tech-tag {
@@ -179,13 +181,29 @@ div>p {
     font-size: 0.8rem;
 }
 
-.card button, .btn-green {
+.button-container {
+    margin: 2rem 0;
+}
+
+.btn-green {
+    text-decoration: none;
     font-size: 1.1rem;
     background-color: #36B37F;
     color: white;
     border: 0;
     padding: 0.8rem 1rem;
     border-radius: 4px;
+    align-self: center;
+}
+
+.btn-green:hover {
+    background-color: #36B37F;
+    box-shadow: 0px 8px 16px 0px #36B37F3D;
+}
+
+.btn-green:active {
+    background-color: #008552;
+    box-shadow: none;
 }
 
 #about-me-icons {
@@ -202,7 +220,7 @@ div>p {
 }
 
 #about-me-icons>svg:nth-child(5) {
-    bottom: 0;
+    bottom: -0.8rem;
     left: -1.5rem;
 }
 
