@@ -3,7 +3,6 @@
 }
 
 body {
-    overflow-x: hidden;
     box-sizing: border-box;
     padding-top: 7rem;
     display: none;
@@ -45,7 +44,7 @@ header {
     justify-content: space-between;
     position: absolute;
     top: 0;
-    width: 100vw;
+    width: 100%;
     font-size: 0.8rem;
 }
 
