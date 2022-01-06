@@ -4,14 +4,32 @@
 
 body {
     box-sizing: border-box;
-    padding-top: 2rem;
+    padding-top: 6rem;
     display: none;
     margin: 0;
     font-family: 'Inter', sans-serif;
     text-align: center;
-    background-image: url("back-image.jpg");
+    /* background-image: url("back-image.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+}
+
+#background-icons svg:nth-child(1) {
+    position: absolute;
+    right: 0;
+    top: 3.5rem;
+}
+
+#background-icons svg:nth-child(3) {
+    position: absolute;
+    left: 0;
+    top: 31rem;
+}
+
+#background-icons svg:nth-child(2) {
+    position: absolute;
+    right: 0;
+    top: 15rem;
 }
 
 header {
@@ -47,7 +65,7 @@ section {
     flex-direction: column;
     justify-content: space-evenly;
     padding: 0 1.5rem;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 ul {
