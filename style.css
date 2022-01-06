@@ -4,7 +4,7 @@
 
 body {
     box-sizing: border-box;
-    padding-top: 6rem;
+    padding-top: 7rem;
     display: none;
     margin: 0;
     font-family: 'Inter', sans-serif;
@@ -14,19 +14,23 @@ body {
     background-size: cover; */
 }
 
-#background-icons svg:nth-child(1) {
+h1 {
+    margin: 0;
+}
+
+#background-icons>svg:nth-child(1) {
     position: absolute;
     right: 0;
     top: 3.5rem;
 }
 
-#background-icons svg:nth-child(3) {
+#background-icons>svg:nth-child(3) {
     position: absolute;
     left: 0;
     top: 31rem;
 }
 
-#background-icons svg:nth-child(2) {
+#background-icons>svg:nth-child(2) {
     position: absolute;
     right: 0;
     top: 15rem;
@@ -44,8 +48,18 @@ header {
     font-size: 0.8rem;
 }
 
-h1 {
+section h1 {
     margin: 0;
+    font-size: 2.5rem;
+}
+
+section>div {
+    margin-bottom: 3rem;
+}
+
+section div img {
+    width: 100%;
+    border-radius: 8px;
 }
 
 #burger-container {
@@ -59,17 +73,27 @@ h1 {
     width: 20px;
 }
 
-section {
-    min-height: calc(100vh - 3rem);
+#landing {
+    min-height: calc(100vh - 6rem);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 0 1.5rem;
+    align-items: center;
     font-size: 1.2rem;
+}
+
+#landing-p {
+    margin: 1rem 0;
 }
 
 ul {
     padding: 0;
+}
+
+body>section {
+    padding: 0 1.5rem;
+    margin-bottom: 5rem;
+    position: relative;
 }
 
 section li {
@@ -95,6 +119,82 @@ h1 span:last-child {
 #contact-box {
     display: flex;
     justify-content: center;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 1rem;
+}
+
+.card {
+    border: 1px solid rgb(179, 177, 177);
+    border-radius: 8px;
+    padding-bottom: 1rem;
+}
+
+.card h1 {
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.card .tech {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+.card .tech-tag {
+    background-color: #EBF0EE;
+    color: #3A4A42;
+    padding: 8px 12px;
+    margin: 0.3rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+div>p {
+    font-size: 1.2rem;
+    padding: 0.6rem 0;
+}
+
+.about-me-card {
+    background-color: #EBF0EE;
+}
+
+.card .about-me-tag {
+    background-color: white;
+    color: #36B37E;
+    padding: 8px 12px;
+    margin: 0.3rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.card button, .btn-green {
+    font-size: 1.1rem;
+    background-color: #36B37F;
+    color: white;
+    border: 0;
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+}
+
+#about-me-icons>svg {
+    position: absolute;
+}
+
+#about-me-icons>svg:nth-child(1) {
+    top: -3rem;
+    right: 0;
+}
+
+#about-me-icons>svg:nth-child(2) {
+    top: 15rem;
+    left: 0;
 }
 
 @media (max-width:550px) {
