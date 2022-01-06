@@ -3,6 +3,7 @@
 }
 
 body {
+    overflow-x: hidden;
     box-sizing: border-box;
     padding-top: 7rem;
     display: none;
@@ -83,7 +84,7 @@ section div img {
 }
 
 #landing-p {
-    margin: 1rem 0;
+    margin: 0;
 }
 
 ul {
@@ -93,7 +94,6 @@ ul {
 body>section {
     padding: 0 1.5rem;
     margin-bottom: 5rem;
-    position: relative;
 }
 
 section li {
@@ -102,7 +102,7 @@ section li {
 
 section li img {
     width: 2rem;
-    margin: 1rem;
+    margin: 0 1rem;
 }
 
 h1 span {
@@ -119,6 +119,7 @@ h1 span:last-child {
 #contact-box {
     display: flex;
     justify-content: center;
+    margin: 0;
 }
 
 .card-container {
@@ -164,6 +165,11 @@ div>p {
     background-color: #EBF0EE;
 }
 
+.about-me-card>svg {
+    height: 10rem;
+    width: 100%;
+}
+
 .card .about-me-tag {
     background-color: white;
     color: #36B37E;
@@ -183,18 +189,22 @@ div>p {
     border-radius: 4px;
 }
 
+#about-me-icons {
+    position: relative;
+}
+
 #about-me-icons>svg {
     position: absolute;
 }
 
-#about-me-icons>svg:nth-child(1) {
-    top: -3rem;
-    right: 0;
+#about-me-icons>svg:nth-child(4) {
+    top: -4rem;
+    right: -1.5rem;
 }
 
-#about-me-icons>svg:nth-child(2) {
-    top: 15rem;
-    left: 0;
+#about-me-icons>svg:nth-child(5) {
+    bottom: 0;
+    left: -1.5rem;
 }
 
 @media (max-width:550px) {
