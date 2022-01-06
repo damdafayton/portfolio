@@ -1,4 +1,4 @@
-![](porfolio-scr.jpg)
+![](portfolio-scr.jpg)
 
 
 # Personal portfolio page
