@@ -5,8 +5,11 @@
 body {
     box-sizing: border-box;
     padding-top: 7rem;
+    <<<<<<< HEAD
     /* display: none; */
-    margin: 0;
+    =======
+    /*     display: none; */
+    >>>>>>>6c5b6b110f8c62f4761fbdefd01f99da4d9417ba margin: 0;
     font-family: 'Inter', sans-serif;
     text-align: center;
 }
