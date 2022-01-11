@@ -5,8 +5,11 @@
 body {
     box-sizing: border-box;
     padding-top: 7rem;
-/*     display: none; */
-    margin: 0;
+    <<<<<<< HEAD
+    /* display: none; */
+    =======
+    /*     display: none; */
+    >>>>>>>6c5b6b110f8c62f4761fbdefd01f99da4d9417ba margin: 0;
     font-family: 'Inter', sans-serif;
     text-align: center;
 }
@@ -39,7 +42,8 @@ header {
     padding: 0.5rem 1.5rem;
     display: flex;
     justify-content: space-between;
-    position: absolute;
+    position: fixed;
+    background-color: white;
     top: 0;
     width: 100%;
     font-size: 0.8rem;
@@ -227,10 +231,12 @@ div>p {
     font-size: 2.5rem;
     margin-bottom: 4rem;
 }
+
 section>form {
     display: flex;
     flex-direction: column;
 }
+
 section>form>* {
     padding: 1rem;
     border-radius: 4px;
@@ -238,7 +244,9 @@ section>form>* {
     border: 1px solid #D0D9D4;
     color: #6B778C;
     font-size: 0.94rem;
+    font-family: 'Inter';
 }
+
 section>form>*:focus-visible {
     outline-color: #60C095;
     color: black;
