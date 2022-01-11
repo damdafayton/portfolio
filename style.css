@@ -221,6 +221,30 @@ div>p {
     left: -1.5rem;
 }
 
+#contact-title {
+    color: #172B4D;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+}
+section>form {
+    display: flex;
+    flex-direction: column;
+}
+section>form>* {
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #D0D9D4;
+    color: #6B778C;
+    font-size: 0.94rem;
+}
+section>form>*:focus-visible {
+    outline-color: #60C095;
+    color: black;
+}
+
+
 @media (max-width:550px) {
     body {
         display: block;
