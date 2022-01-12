@@ -34,7 +34,7 @@ h1 {
 
 #background-icons>svg:nth-child(3) {
     left: 0;
-    top: 31rem;
+    top: 32rem;
 }
 
 #background-icons>svg:nth-child(2) {
@@ -44,8 +44,8 @@ h1 {
 }
 
 #background-icons>svg:nth-child(4) {
-    left: 3rem;
-    top: 14rem;
+    left: 1rem;
+    top: 20rem;
 }
 
 #background-icons>svg:nth-child(5) {
@@ -65,10 +65,10 @@ h1 {
 }
 
 #background-icons>svg:nth-child(8) {
-    left: 0;
+    left: -20%;
     top: 0;
     bottom: 0;
-    width: 100%;
+    width: 140%;
     height: 100vh;
 }
 
