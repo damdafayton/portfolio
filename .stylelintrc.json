@@ -15,7 +15,5 @@
         "build/**",
         "dist/**",
         "**/reset*.css",
-        "**/bootstrap*.css",
-        "**/style.css"
-    ]
+        "**/bootstrap*.css"    ]
 }
