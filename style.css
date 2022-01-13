@@ -317,7 +317,7 @@ div > p {
   bottom: -10rem;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 992px) {
   header > nav > ul,
   #footer-icons,
   #background-icons > svg:nth-child(7) {
@@ -325,7 +325,7 @@ div > p {
   }
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 992px) {
   :root {
     --section-x-padding: 5rem;
   }
