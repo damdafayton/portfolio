@@ -177,11 +177,14 @@ h1 span:last-child {
     padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .card h1 {
     font-size: 1.5rem;
     margin: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card .tech {
