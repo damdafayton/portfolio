@@ -12,7 +12,7 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   text-align: center;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 li {
