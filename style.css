@@ -35,6 +35,7 @@ ul {
 
 #background-icons {
   position: relative;
+  overflow-x: clip;
 }
 
 #background-icons>svg,
