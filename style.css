@@ -1,6 +1,6 @@
 :root {
   --section-x-padding: 1.5rem;
-  --navbar-margin: 7rem;
+  --navbar-margin: 5rem;
 }
 
 * {
@@ -167,7 +167,7 @@ section div img {
 }
 
 #landing {
-  min-height: calc(100vh - 6rem);
+  min-height: calc(100vh - var(--navbar-margin));
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -374,8 +374,7 @@ div>p {
 
 #background-icons>svg:nth-child(2n+1):hover {
   cursor: pointer;
-  height: 200vh;
-
+  height: 300vh;
   /* margin-top: 100vh; */
   transform: rotate(180deg) scale(1.5);
 }
