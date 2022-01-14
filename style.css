@@ -46,39 +46,39 @@ ul {
 
 #background-icons>svg:nth-child(1) {
   right: 0;
-  top: 3.5rem;
+  top: calc(3.5rem - var(--navbar-margin));
 }
 
 #background-icons>svg:nth-child(3) {
   left: 0;
-  top: 32rem;
+  top: calc(32rem - var(--navbar-margin));
 }
 
 #background-icons>svg:nth-child(2) {
   right: -75px;
-  top: 15rem;
+  top: calc(15rem - var(--navbar-margin));
   width: 100px;
 }
 
 #background-icons>svg:nth-child(4) {
   left: 1rem;
-  top: 20rem;
+  top: calc(20rem - var(--navbar-margin));
 }
 
 #background-icons>svg:nth-child(5) {
   left: 12rem;
-  top: 31.2rem;
+  top: calc(31.2rem - var(--navbar-margin));
 }
 
 #background-icons>svg:nth-child(6) {
   right: 0;
-  top: 37rem;
+  top: calc(37rem - var(--navbar-margin));
 }
 
 #background-icons>svg:nth-child(7) {
   width: 15rem;
   left: 0;
-  top: 7rem;
+  top: calc(7rem - var(--navbar-margin));
 }
 
 #background-icons>svg:nth-child(8) {
