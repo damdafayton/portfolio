@@ -401,7 +401,7 @@ div > p {
 @media screen and (min-width: 992px) {
   :root {
     --section-x-padding: 5rem;
-    --navbar-margin: 0;
+    --navbar-margin: 0.1px;
   }
 
   header {
