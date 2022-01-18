@@ -1,6 +1,8 @@
 :root {
   --section-x-padding: 1.5rem;
   --navbar-margin: 5rem;
+  --green:#28845d;
+  --btn-green:#28845e;
 }
 
 * {
@@ -219,7 +221,7 @@ h1 span {
 }
 
 h1 span:last-child {
-  color: #36b37e;
+  color: var(--green);
 }
 
 #contact-box {
@@ -271,7 +273,7 @@ div>p {
 
 .card .about-me-tag {
   background-color: white;
-  color: #36b37e;
+  color: var(--green);
   padding: 8px 12px;
   margin: 0.3rem;
   border-radius: 8px;
@@ -286,7 +288,7 @@ div>p {
 .btn-green {
   text-decoration: none;
   font-size: 1.1rem !important;
-  background-color: #36b37f !important;
+  background-color: var(--btn-green) !important;
   color: white !important;
   border: 0 !important;
   padding: 0.8rem 1rem !important;
@@ -295,8 +297,8 @@ div>p {
 }
 
 .btn-green:hover {
-  background-color: #36b37f;
-  box-shadow: 0 8px 16px 0 #36b37f3d;
+  background-color: var(--btn-green);
+  box-shadow: 0 8px 16px 0 var(--btn-green)3d;
 }
 
 .btn-green:active {
