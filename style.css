@@ -3,6 +3,8 @@
   --navbar-margin: 5rem;
   --green:#28845d;
   --btn-green:#28845e;
+  --btn-green-hover:#2a664dad;
+  --btn-green-active:#186c4c;
 }
 
 * {
@@ -294,7 +296,7 @@ div>p {
 .btn-green {
   text-decoration: none;
   font-size: 1.1rem !important;
-  background-color: var(--btn-green) !important;
+  background-color: var(--btn-green);
   color: white !important;
   border: 0 !important;
   padding: 0.8rem 1rem !important;
@@ -304,11 +306,11 @@ div>p {
 
 .btn-green:hover {
   background-color: var(--btn-green);
-  box-shadow: 0 8px 16px 0 var(--btn-green)3d;
+  box-shadow: 0 8px 12px var(--btn-green-hover);
 }
 
 .btn-green:active {
-  background-color: #008552;
+  background-color: var(--btn-green-active);
   box-shadow: none;
 }
 
