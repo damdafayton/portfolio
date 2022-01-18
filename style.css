@@ -1,6 +1,10 @@
 :root {
   --section-x-padding: 1.5rem;
   --navbar-margin: 5rem;
+  --green:#28845d;
+  --btn-green:#28845e;
+  --btn-green-hover:#2a664dad;
+  --btn-green-active:#186c4c;
 }
 
 * {
@@ -219,7 +223,7 @@ h1 span {
 }
 
 h1 span:last-child {
-  color: #36b37e;
+  color: var(--green);
 }
 
 #contact-box {
@@ -271,7 +275,7 @@ div > p {
 
 .card .about-me-tag {
   background-color: white;
-  color: #36b37e;
+  color: var(--green);
   padding: 8px 12px;
   margin: 0.3rem;
   border-radius: 8px;
@@ -286,28 +290,28 @@ div > p {
 .btn-green {
   text-decoration: none;
   font-size: 1.1rem !important;
-  background-color: #36b37f !important;
+  background-color: var(--btn-green);
   color: white !important;
   border: 0 !important;
   padding: 0.8rem 1rem !important;
   border-radius: 4px !important;
   align-self: center;
+  cursor:pointer;
 }
 
 .btn-green:hover {
-  background-color: var(--btn-green);
   box-shadow: 0 8px 12px var(--btn-green-hover);
+}
+
+.btn-green:focus-visible {
+  outline-color: #f00;
+  outline-style: double;
+  outline-width: thick;
 }
 
 .btn-green:active {
   background-color: var(--btn-green-active);
   box-shadow: none;
-}
-
-.btn-green:focus {
-  outline-color: #f00;
-  outline-style: double;
-  outline-width: thick;
 }
 
 #about-me-icons {
