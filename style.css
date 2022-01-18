@@ -295,13 +295,19 @@ div>p {
 }
 
 .btn-green:hover {
-  background-color: #36b37f;
-  box-shadow: 0 8px 16px 0 #36b37f3d;
+  background-color: var(--btn-green);
+  box-shadow: 0 8px 12px var(--btn-green-hover);
 }
 
 .btn-green:active {
-  background-color: #008552;
+  background-color: var(--btn-green-active);
   box-shadow: none;
+}
+
+.btn-green:focus{
+      outline-color: #ff0000;
+      outline-style: double;
+      outline-width: thick;
 }
 
 #about-me-icons {
