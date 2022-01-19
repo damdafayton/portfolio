@@ -1,10 +1,10 @@
 :root {
   --section-x-padding: 1.5rem;
   --navbar-margin: 5rem;
-  --green:#28845d;
-  --btn-green:#28845e;
-  --btn-green-hover:#2a664dad;
-  --btn-green-active:#186c4c;
+  --green: #28845d;
+  --btn-green: #28845e;
+  --btn-green-hover: #2a664dad;
+  --btn-green-active: #186c4c;
 }
 
 * {
@@ -296,7 +296,7 @@ div > p {
   padding: 0.8rem 1rem !important;
   border-radius: 4px !important;
   align-self: center;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .btn-green:hover {

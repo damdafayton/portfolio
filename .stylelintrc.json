@@ -14,7 +14,7 @@
     "ignoreFiles": [
         "build/**",
         "dist/**",
-        "**/style.css",
         "**/reset*.css",
-        "**/bootstrap*.css"    ]
+        "**/bootstrap*.css"
+    ]
 }
