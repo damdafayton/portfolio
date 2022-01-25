@@ -11,13 +11,13 @@
   box-sizing: border-box;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
 
-a:hover{
-  color:black;
+a:hover {
+  color: black;
 }
 
 body {
@@ -157,6 +157,7 @@ header {
 }
 
 header > nav > ul {
+  transition: margin-left 1s;
   margin-left: 110vw;
   margin-top: 0;
   position: absolute;
@@ -171,7 +172,6 @@ header > nav > ul {
   z-index: 100;
   padding-top: 5rem;
   padding-left: 1rem;
-  transition: all 1s;
 }
 
 nav > ul > li {
@@ -222,7 +222,8 @@ section div img {
   border-radius: 4px;
 }
 
-#burger-container:active, #svgClose:active {
+#burger-container:active,
+#svgClose:active {
   background-color: #cfcccc;
 }
 
@@ -259,6 +260,7 @@ section li img {
 #landing > h1,
 #landing-p {
   animation: im-developer 2s ease-out;
+  z-index: -1;
 }
 
 @keyframes im-developer {
@@ -447,6 +449,12 @@ div > p {
   transform: rotate(180deg) scale(1.5);
 }
 
+/* @media screen and (min-width: 800px) {
+nav > ul {
+  transition: all 0s !important;
+}
+} */
+
 @media screen and (min-width: 992px) {
   :root {
     --section-x-padding: 5rem;
@@ -459,12 +467,24 @@ div > p {
   }
 
   header > h1,
-  #burger-container {
+  #burger-container,
+  #svgClose {
     display: none;
   }
 
   nav > ul {
+    transition: all 0s !important;
     display: flex;
+    margin-left: 0 !important;
+    position: static !important;
+    height: min-content !important;
+    font-size: inherit !important;
+    padding-top: 0 !important;
+  }
+
+  nav > ul > li {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   #landing {
