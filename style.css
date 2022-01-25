@@ -57,6 +57,11 @@ ul {
   margin-left: 0;
 }
 
+section h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
 .about-me-card > svg {
   height: 10rem;
   width: 100%;
@@ -200,11 +205,6 @@ nav > ul > li {
   border-radius: 4px;
 }
 
-section h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-
 section > div {
   margin-bottom: 5rem;
 }
@@ -301,7 +301,7 @@ h1 span:last-child {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 0rem 0.2rem 1.2rem 0.2rem;
+  margin: 0 0.2rem 1.2rem 0.2rem;
 }
 
 .tech-tag {

@@ -112,7 +112,9 @@ function portfolioPopUp(e) {
     e.preventDefault()
     let n = 0;
     // Find the order of clicked item among all the works
-    myWorks.forEach((work, i) => e.target.parentElement == work ? n = i : null)
+    myWorks.forEach((work, i) => {
+        e.target.parentElement == work ? n = i : null
+    })
     n++ // to adjust for object order
 
     const popUpElements = popUp.querySelectorAll('*')

@@ -63,6 +63,15 @@ ul {
     margin-left: 0;
 }
 
+section h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.card h1 {
+    @extend %portfolio-h1;
+}
+
 .about-me-card > svg {
     height: 10rem;
     width: 100%;
@@ -214,11 +223,6 @@ nav > ul > li {
     }
 }
 
-section h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
 section > div {
     margin-bottom: 5rem;
 }
@@ -263,10 +267,6 @@ body > section {
 section li img {
     width: 2rem;
     margin: 0 1rem;
-}
-
-.card h1 {
-    @extend %portfolio-h1;
 }
 
 #landing > h1,
@@ -321,7 +321,7 @@ h1 span:last-child {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 0rem 0.2rem 1.2rem 0.2rem;
+    margin: 0 0.2rem 1.2rem 0.2rem;
 }
 
 .tech-tag {
@@ -499,6 +499,7 @@ nav > ul {
         align-self: end;
         width: 24px;
         color: white;
+
         &:hover {
             background-color: $svgWhiteHover;
         }
