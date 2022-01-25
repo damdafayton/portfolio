@@ -6,6 +6,10 @@
 }
 
 $text-color: #344563;
+$svgGray: #67798e;
+$svgGrayHover: #e5e2e2c2;
+$svgWhiteHover: rgb(32 31 31 / 75%);
+$svgGrayActive: #ccccccde;
 
 :root {
     --section-x-padding: 1.5rem;
@@ -191,18 +195,23 @@ nav > ul > li {
     color: #344563;
 }
 
-#svgClose {
+.svgClose {
     /* fill: blue; */
     position: absolute;
     right: 2rem;
     top: 2rem;
-    color: #67798e;
+    color: $svgGray;
     cursor: pointer;
-}
 
-#svgClose:hover {
-    background-color: #e5e2e2c2;
-    border-radius: 4px;
+    &:hover {
+        background-color: $svgGrayHover;
+        border-radius: 4px;
+    }
+
+    &:active {
+        background-color: $svgGrayActive;
+        border-radius: 4px;
+    }
 }
 
 section h1 {
@@ -231,11 +240,6 @@ section div img {
 #burger-container:hover {
     background-color: #e5e2e2c2;
     border-radius: 4px;
-}
-
-#burger-container:active,
-#svgClose:active {
-    background-color: #cfcccc;
 }
 
 #landing {
@@ -477,20 +481,27 @@ nav > ul {
     justify-content: center;
 
     #content {
+        position: relative;
         text-align: left;
-        width: 80%;
-        height: auto;
+        width: 100%;
+        height: max-content;
+        max-height: 80vh;
         background-color: white;
         border-radius: 8px;
         padding: 1rem;
         display: flex;
         flex-direction: column;
         overflow-y: scroll;
+        margin-bottom: 0;
     }
 
-    #svgClose {
-        position: static;
+    .svgClose {
         align-self: end;
+        width: 24px;
+        color: white;
+        &:hover {
+            background-color: $svgWhiteHover;
+        }
     }
 
     #popUpTitle {
@@ -498,10 +509,8 @@ nav > ul {
         justify-content: space-between;
         align-items: center;
 
-        img {
-            height: 18px;
-            width: 18px;
-            margin-left: 0.5rem;
+        span {
+            display: none;
         }
     }
 
@@ -518,15 +527,28 @@ nav > ul {
         font-size: 0.9rem !important;
         padding: 0.5rem 0.7rem !important;
         display: inline-flex;
+        justify-content: space-evenly;
+        flex: 1;
+        align-items: center;
     }
 
     p {
         color: $text-color;
         font-size: 1rem;
     }
+
+    a > img {
+        height: 18px;
+        width: 18px;
+        margin-left: 0.5rem;
+    }
+
+    .btn-group {
+        display: flex;
+    }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 890px) {
     :root {
         --section-x-padding: 5rem;
         --navbar-margin: 0.1px;
@@ -539,7 +561,7 @@ nav > ul {
 
     header > h1,
     #burger-container,
-    #svgClose {
+    #content > .btn-group {
         display: none;
     }
 
@@ -600,5 +622,28 @@ nav > ul {
     #footer-icons,
     #background-icons > svg:nth-child(7) {
         display: block;
+    }
+
+    #popUp {
+        .svgClose {
+            flex: none;
+            display: block;
+            position: static;
+            width: 24px !important;
+            color: $svgGray;
+
+            &:hover {
+                background-color: $svgGrayHover;
+            }
+        }
+
+        #content {
+            width: 80%;
+        }
+        #popUpTitle {
+            span {
+                display: block !important;
+            }
+        }
     }
 }

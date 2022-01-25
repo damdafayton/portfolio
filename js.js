@@ -53,18 +53,20 @@ const portfolioObj = {
 // Navbar
 const nav = document.querySelector('nav > ul');
 const burger = document.querySelector('#burger-container');
-const closeBtn = document.querySelector('#svgClose');
+const closeBtn = document.querySelector('.svgClose');
 
-function slideLeft() {
+function toggleMenu() {
     nav.classList.toggle('slide-left');
+    closeBtn.classList.toggle('d-none')
 }
 
-burger.addEventListener('click', slideLeft);
-closeBtn.addEventListener('click', slideLeft);
+burger.addEventListener('click', toggleMenu);
+closeBtn.addEventListener('click', toggleMenu);
 
 const navLinks = document.querySelectorAll('nav>ul>li>a');
 navLinks.forEach((link) => link.addEventListener('click', () => {
     nav.classList.remove('slide-left');
+    closeBtn.classList.add('d-none')
 }));
 
 // Fill my works
@@ -95,7 +97,7 @@ myWorks.forEach((work, i) => {
 })
 
 const popUp = document.querySelector('#popUp')
-const popUpClose = document.querySelector('#popUp #svgClose')
+const popUpClose = document.querySelector('#popUp .svgClose')
 
 // Pop-up close button
 popUpClose.addEventListener('click', (e) => {
