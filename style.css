@@ -608,9 +608,15 @@ nav > ul {
     position: static;
     width: 24px !important;
     color: #67798e;
+    background-color: #e5e2e2c2;
+    border-radius: 4px;
+    margin: 0;
   }
   #popUp .svgClose:hover {
-    background-color: #e5e2e2c2;
+    background-color: #c3c0c0c7 !important;
+  }
+  #popUp .svgClose:hover:active {
+    background-color: #c3c0c0c7 !important;
   }
   #popUp #content {
     width: 80%;

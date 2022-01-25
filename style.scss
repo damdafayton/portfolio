@@ -648,9 +648,15 @@ nav > ul {
             position: static;
             width: 24px !important;
             color: $svgGray;
+            background-color: $svgGrayHover;
+            border-radius: 4px;
+            margin: 0;
 
             &:hover {
-                background-color: $svgGrayHover;
+                background-color: $svgGrayActive !important;
+            }
+            &:hover:active {
+                background-color: $svgGrayActive !important;
             }
         }
 
