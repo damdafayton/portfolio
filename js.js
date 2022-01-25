@@ -50,7 +50,7 @@ const portfolioObj = {
     },
 }
 
-// Navbar
+// NAVBAR SECTION
 const nav = document.querySelector('nav > ul');
 const burger = document.querySelector('#burger-container');
 const closeBtn = document.querySelector('.svgClose');
@@ -69,7 +69,7 @@ navLinks.forEach((link) => link.addEventListener('click', () => {
     closeBtn.classList.add('d-none')
 }));
 
-// Fill my works
+// WORKS SECTION
 const myWorks = document.querySelectorAll('#my-works>.card-container>.card')
 myWorks.forEach((work, i) => {
     i = i + 1
@@ -96,12 +96,16 @@ myWorks.forEach((work, i) => {
     })
 })
 
+
+// POPUP SECTION
 const popUp = document.querySelector('#popUp')
 const popUpClose = document.querySelector('#popUp .svgClose')
+const body = document.querySelector('body')
 
 // Pop-up close button
 popUpClose.addEventListener('click', (e) => {
     popUp.classList.remove('show')
+    body.classList.remove('body-blur')
     // Clean the list
     const uList = e.target.parentElement.querySelector('UL')
     uList.innerHTML = ''
@@ -137,6 +141,7 @@ function portfolioPopUp(e) {
     })
 
     popUp.classList.add('show')
+    // body.classList.add('body-blur')
 }
 
 function techListElementCreator(tech) {
