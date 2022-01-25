@@ -1,3 +1,10 @@
+#popUp h1, .card h1 {
+  font-size: 1.5rem;
+  margin: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 :root {
   --section-x-padding: 1.5rem;
   --navbar-margin: 5rem;
@@ -35,14 +42,15 @@ li {
 
 h1 {
   margin: 0;
+  text-align: center;
 }
 
 ul {
-  padding: 0;
+  padding: 0 !important;
 }
 
 .show {
-  display: block;
+  display: flex !important;
 }
 
 .slide-left {
@@ -116,29 +124,24 @@ ul {
   0% {
     opacity: 0;
   }
-
   49% {
     opacity: 0;
   }
-
   50% {
     opacity: 1;
-
     /* display: block; */
     transform: scale(1.5);
   }
-
   75% {
     /* display: block; */
     transform: scale(0.7);
   }
-
   100% {
     transform: scale(1);
   }
 }
-
 header {
+  z-index: 1;
   box-sizing: border-box;
   margin: 0;
   padding: 0.5rem 1.5rem;
@@ -250,13 +253,6 @@ section li img {
   margin: 0 1rem;
 }
 
-.card h1 {
-  font-size: 1.5rem;
-  margin: 1rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 #landing > h1,
 #landing-p {
   animation: im-developer 2s ease-out;
@@ -267,12 +263,10 @@ section li img {
   0% {
     transform: scale(0.1);
   }
-
   100% {
     transform: scale(1);
   }
 }
-
 h1 span {
   font-size: 2.5rem;
   text-align: center;
@@ -305,14 +299,14 @@ h1 span:last-child {
   overflow: hidden;
 }
 
-.card .tech {
+.tech {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 0 0.2rem 1.2rem;
+  margin: 0rem 0.2rem 1.2rem 0.2rem;
 }
 
-.card .tech-tag {
+.tech-tag {
   background-color: #ebf0ee;
   color: #3a4a42;
   padding: 8px 12px;
@@ -328,7 +322,7 @@ div > p {
 }
 
 .about-me-card {
-  background-color: #ebf0ee;
+  background-color: #ebf0ee !important;
 }
 
 .card .about-me-tag {
@@ -373,6 +367,7 @@ div > p {
 }
 
 #about-me {
+  text-align: center;
   position: relative;
   z-index: -1;
 }
@@ -441,10 +436,9 @@ div > p {
   transform: rotate(360deg) scale(0.1);
 }
 
-#background-icons > svg:nth-child(2n + 1):hover {
+#background-icons > svg:nth-child(2n+1):hover {
   cursor: pointer;
   height: 300vh;
-
   /* margin-top: 100vh; */
   transform: rotate(180deg) scale(1.5);
 }
@@ -454,6 +448,56 @@ nav > ul {
   transition: all 0s !important;
 }
 } */
+#popUp {
+  z-index: 2;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background: #c1c7d0de;
+  text-align: center;
+  justify-content: center;
+}
+#popUp #content {
+  text-align: left;
+  width: 80%;
+  height: auto;
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+#popUp #svgClose {
+  position: static;
+  align-self: end;
+}
+#popUp #popUpTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#popUp #popUpTitle img {
+  height: 18px;
+  width: 18px;
+  margin-left: 0.5rem;
+}
+#popUp ul {
+  justify-content: start;
+  margin-left: -0.3rem;
+}
+#popUp .btn-green {
+  font-size: 0.9rem !important;
+  padding: 0.5rem 0.7rem !important;
+  display: inline-flex;
+}
+#popUp p {
+  color: #344563;
+  font-size: 1rem;
+}
 
 @media screen and (min-width: 992px) {
   :root {
@@ -467,8 +511,8 @@ nav > ul {
   }
 
   header > h1,
-  #burger-container,
-  #svgClose {
+#burger-container,
+#svgClose {
     display: none;
   }
 
@@ -527,7 +571,9 @@ nav > ul {
   }
 
   #footer-icons,
-  #background-icons > svg:nth-child(7) {
+#background-icons > svg:nth-child(7) {
     display: block;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
