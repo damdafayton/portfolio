@@ -40,6 +40,15 @@ body {
     font-family: "Inter", sans-serif;
     text-align: center;
     overflow-x: hidden;
+
+    section {
+        padding: 0 var(--section-x-padding);
+        padding-top: 4rem;
+
+        &:nth-of-type(1) {
+            padding-top: 0;
+        }
+    }
 }
 
 li {
@@ -53,6 +62,11 @@ h1 {
 
 ul {
     padding: 0 !important;
+}
+
+div > p {
+    font-size: 1.2rem;
+    padding: 0.6rem 0;
 }
 
 .show {
@@ -177,35 +191,35 @@ header {
     top: 0;
     width: 100%;
     font-size: 0.8rem;
+
+    nav > ul {
+        transition: margin-left 1s;
+        margin-left: 110vw;
+        margin-top: 0;
+        position: absolute;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: white;
+        font-size: 2.8rem;
+        font-weight: 600;
+        text-align: left;
+        z-index: 100;
+        padding-top: 5rem;
+        padding-left: 1rem;
+
+        li {
+            margin: 1.6rem 1.8rem;
+            font-weight: 600;
+            color: #344563;
+        }
+    }
 }
 
 #footer-icons,
 #background-icons > svg:nth-child(7) {
     display: none;
-}
-
-header > nav > ul {
-    transition: margin-left 1s;
-    margin-left: 110vw;
-    margin-top: 0;
-    position: absolute;
-    height: 100vh;
-    top: 0;
-    right: 0;
-    left: 0;
-    background-color: white;
-    font-size: 2.8rem;
-    font-weight: 600;
-    text-align: left;
-    z-index: 100;
-    padding-top: 5rem;
-    padding-left: 1rem;
-}
-
-nav > ul > li {
-    margin: 1.6rem 1.8rem;
-    font-weight: 600;
-    color: #344563;
 }
 
 .svgClose {
@@ -225,10 +239,6 @@ nav > ul > li {
         background-color: $svgGrayActive !important;
         border-radius: 4px;
     }
-}
-
-section > div {
-    margin-bottom: 5rem;
 }
 
 section div img {
@@ -266,11 +276,6 @@ section div img {
 
 #landing-p {
     margin: 0;
-}
-
-body > section {
-    padding: 0 var(--section-x-padding);
-    padding-top: 4rem;
 }
 
 section li img {
@@ -314,7 +319,7 @@ h1 span:last-child {
 .card-container {
     display: grid;
     grid-template-columns: 100%;
-    grid-row-gap: 1rem;
+    grid-row-gap: 1.5rem;
 }
 
 .card {
@@ -341,11 +346,6 @@ h1 span:last-child {
     border-radius: 4px;
     font-weight: 600;
     font-size: 0.8rem;
-}
-
-div > p {
-    font-size: 1.2rem;
-    padding: 0.6rem 0;
 }
 
 .about-me-card {

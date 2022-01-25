@@ -35,6 +35,13 @@ body {
   text-align: center;
   overflow-x: hidden;
 }
+body section {
+  padding: 0 var(--section-x-padding);
+  padding-top: 4rem;
+}
+body section:nth-of-type(1) {
+  padding-top: 0;
+}
 
 li {
   list-style-type: none;
@@ -47,6 +54,11 @@ h1 {
 
 ul {
   padding: 0 !important;
+}
+
+div > p {
+  font-size: 1.2rem;
+  padding: 0.6rem 0;
 }
 
 .show {
@@ -162,13 +174,7 @@ header {
   width: 100%;
   font-size: 0.8rem;
 }
-
-#footer-icons,
-#background-icons > svg:nth-child(7) {
-  display: none;
-}
-
-header > nav > ul {
+header nav > ul {
   transition: margin-left 1s;
   margin-left: 110vw;
   margin-top: 0;
@@ -185,11 +191,15 @@ header > nav > ul {
   padding-top: 5rem;
   padding-left: 1rem;
 }
-
-nav > ul > li {
+header nav > ul li {
   margin: 1.6rem 1.8rem;
   font-weight: 600;
   color: #344563;
+}
+
+#footer-icons,
+#background-icons > svg:nth-child(7) {
+  display: none;
 }
 
 .svgClose {
@@ -207,10 +217,6 @@ nav > ul > li {
 .svgClose:active {
   background-color: #c3c0c0c7 !important;
   border-radius: 4px;
-}
-
-section > div {
-  margin-bottom: 5rem;
 }
 
 section div img {
@@ -246,11 +252,6 @@ section div img {
 
 #landing-p {
   margin: 0;
-}
-
-body > section {
-  padding: 0 var(--section-x-padding);
-  padding-top: 4rem;
 }
 
 section li img {
@@ -292,7 +293,7 @@ h1 span:last-child {
 .card-container {
   display: grid;
   grid-template-columns: 100%;
-  grid-row-gap: 1rem;
+  grid-row-gap: 1.5rem;
 }
 
 .card {
@@ -319,11 +320,6 @@ h1 span:last-child {
   border-radius: 4px;
   font-weight: 600;
   font-size: 0.8rem;
-}
-
-div > p {
-  font-size: 1.2rem;
-  padding: 0.6rem 0;
 }
 
 .about-me-card {
