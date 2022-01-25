@@ -334,14 +334,20 @@
         <h1>Welcome</h1>
         <nav>
             <div id="burger-container">
-                <div class="burger-line"></div>
-                <div class="burger-line"></div>
-                <div class="burger-line"></div>
+                <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0.00012207 1C0.00012207 0.447715 0.447837 0 1.00012 0H17.0001C17.5524 0 18.0001 0.447715 18.0001 1C18.0001 1.55228 17.5524 2 17.0001 2H1.00012C0.447837 2 0.00012207 1.55228 0.00012207 1ZM0.00012207 6C0.00012207 5.44772 0.447837 5 1.00012 5L17.0001 5C17.5524 5 18.0001 5.44772 18.0001 6C18.0001 6.55229 17.5524 7 17.0001 7L1.00012 7C0.447837 7 0.00012207 6.55228 0.00012207 6ZM1.00012 10C0.447837 10 0.00012207 10.4477 0.00012207 11C0.00012207 11.5523 0.447837 12 1.00012 12H17.0001C17.5524 12 18.0001 11.5523 18.0001 11C18.0001 10.4477 17.5524 10 17.0001 10H1.00012Z"
+                        fill="#28352F" />
+                </svg>
             </div>
             <ul>
-                <li>Portfolio</li>
-                <li>About</li>
-                <li>Contact</li>
+                <svg id="svgClose" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" />
+                </svg>
+                <li><a href="#my-works">Portfolio</a></li>
+                <li><a href="#about-me-section">About</a></li>
+                <li><a href="#contact-me-section">Contact</a></li>
             </ul>
         </nav>
 
@@ -373,7 +379,7 @@
             </svg>
         </div>
     </section>
-    <section>
+    <section id="my-works">
         <div>
             <h1>My Recent Works</h1>
             <svg width="49" height="4" viewBox="0 0 49 4" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -449,8 +455,8 @@
             </div>
         </div>
     </section>
-    <section>
-        <div id="about-me-icons">
+    <section id="about-me-section">
+        <div id="about-me">
             <h1>About Me</h1>
             <p>I can help you build a product, feature or website Look through some of my work and experience! If
                 you like what you see and have a project you need coded,
@@ -742,8 +748,8 @@
             </li>
         </ul>
     </section>
-    <section>
-        <div id="contact-container">
+    <section id="contact-me-section">
+        <div id="contact-me">
             <h1 id="contact-title">I'm always interested in hearing about new projects, so if you'd like to chat please
                 get
                 in touch.</h1>
@@ -925,3 +931,5 @@
 </body>
 
 </html>
+
+<script src="./js.js"></script>
