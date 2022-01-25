@@ -183,16 +183,16 @@ header > nav > ul {
 }
 
 nav > ul > li {
-  margin: 1.6rem 0.7rem;
+  margin: 1.6rem 1.8rem;
   font-weight: 600;
   color: #344563;
 }
 
 .svgClose {
   /* fill: blue; */
-  position: absolute;
-  right: 2rem;
-  top: 2rem;
+  position: static;
+  margin-right: 0.8rem;
+  margin-top: 0.8rem;
   color: #67798e;
   cursor: pointer;
 }
@@ -222,9 +222,12 @@ section div img {
   cursor: pointer;
   padding: 0.5rem;
 }
-
 #burger-container:hover {
   background-color: #e5e2e2c2;
+  border-radius: 4px;
+}
+#burger-container:hover:active {
+  background-color: #c3c0c0c7;
   border-radius: 4px;
 }
 
@@ -473,12 +476,18 @@ nav > ul {
   margin-bottom: 0;
 }
 #popUp .svgClose {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
   align-self: end;
   width: 24px;
   color: white;
 }
 #popUp .svgClose:hover {
   background-color: rgba(32, 31, 31, 0.75);
+}
+#popUp .svgClose:hover:active {
+  background-color: black !important;
 }
 #popUp #popUpTitle {
   display: flex;

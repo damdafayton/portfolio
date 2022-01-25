@@ -199,16 +199,16 @@ header > nav > ul {
 }
 
 nav > ul > li {
-    margin: 1.6rem 0.7rem;
+    margin: 1.6rem 1.8rem;
     font-weight: 600;
     color: #344563;
 }
 
 .svgClose {
     /* fill: blue; */
-    position: absolute;
-    right: 2rem;
-    top: 2rem;
+    position: static;
+    margin-right: 0.8rem;
+    margin-top: 0.8rem;
     color: $svgGray;
     cursor: pointer;
 
@@ -239,11 +239,16 @@ section div img {
     height: 100%;
     cursor: pointer;
     padding: 0.5rem;
-}
 
-#burger-container:hover {
-    background-color: #e5e2e2c2;
-    border-radius: 4px;
+    &:hover {
+        background-color: #e5e2e2c2;
+        border-radius: 4px;
+    }
+
+    &:hover:active {
+        background-color: $svgGrayActive;
+        border-radius: 4px;
+    }
 }
 
 #landing {
@@ -496,12 +501,19 @@ nav > ul {
     }
 
     .svgClose {
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
         align-self: end;
         width: 24px;
         color: white;
 
         &:hover {
             background-color: $svgWhiteHover;
+        }
+
+        &:hover:active {
+            background-color: black !important;
         }
     }
 
