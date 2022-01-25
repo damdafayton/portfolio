@@ -201,7 +201,7 @@ nav > ul > li {
   border-radius: 4px;
 }
 .svgClose:active {
-  background-color: #ccccccde;
+  background-color: #c3c0c0c7 !important;
   border-radius: 4px;
 }
 

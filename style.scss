@@ -9,7 +9,7 @@ $text-color: #344563;
 $svgGray: #67798e;
 $svgGrayHover: #e5e2e2c2;
 $svgWhiteHover: rgb(32 31 31 / 75%);
-$svgGrayActive: #ccccccde;
+$svgGrayActive: #c3c0c0c7;
 
 :root {
     --section-x-padding: 1.5rem;
@@ -218,7 +218,7 @@ nav > ul > li {
     }
 
     &:active {
-        background-color: $svgGrayActive;
+        background-color: $svgGrayActive !important;
         border-radius: 4px;
     }
 }
