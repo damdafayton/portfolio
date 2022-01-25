@@ -57,7 +57,7 @@ const closeBtn = document.querySelector('.svgClose');
 
 function toggleMenu() {
     nav.classList.toggle('slide-left');
-    closeBtn.classList.toggle('d-none')
+    closeBtn.classList.toggle('opacity-0')
 }
 
 burger.addEventListener('click', toggleMenu);

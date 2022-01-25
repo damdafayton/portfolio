@@ -535,8 +535,9 @@ nav > ul {
 
   header > h1,
 #burger-container,
-#content > .btn-group {
-    display: none;
+#content > .btn-group,
+nav li:nth-child(1) {
+    display: none !important;
   }
 
   nav > ul {
