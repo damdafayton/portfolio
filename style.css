@@ -1,4 +1,4 @@
-#popUp h1, .card h1 {
+#popUp h2, .card > h2 {
   font-size: 1.5rem;
   margin: 1rem;
   overflow: hidden;
@@ -383,79 +383,6 @@ h1 span:last-child {
   left: calc(-1 * var(--section-x-padding));
 }
 
-#contact-title {
-  color: #172b4d;
-  font-weight: 700;
-  font-size: 2.5rem;
-  margin-bottom: 4rem;
-}
-
-#contact-me > form {
-  display: flex;
-  flex-direction: column;
-  z-index: 1;
-}
-#contact-me > form * {
-  padding: 1rem;
-  border-radius: 4px;
-  margin-bottom: 1.5rem;
-  border: 1px solid #d0d9d4;
-  color: #6b778c;
-  font-size: 0.94rem;
-  font-family: "Inter", sans-serif;
-}
-#contact-me > form *:focus-visible {
-  outline-color: #60c095;
-  color: black;
-}
-#contact-me > form .alert * {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-#contact-me > form .alert img {
-  width: 24px;
-}
-
-#footer-icons {
-  position: relative;
-}
-
-#footer-icons > svg:nth-child(1) {
-  position: absolute;
-  left: 0;
-  bottom: -12rem;
-}
-
-#footer-icons > svg:nth-child(2) {
-  position: absolute;
-  bottom: -5rem;
-  left: 15rem;
-}
-
-#footer-icons > svg:nth-child(3) {
-  position: absolute;
-  right: 0;
-  bottom: -10rem;
-}
-
-#background-icons > svg:nth-child(2n):hover {
-  cursor: pointer;
-  transform: rotate(360deg) scale(0.1);
-}
-
-#background-icons > svg:nth-child(2n+1):hover {
-  cursor: pointer;
-  height: 300vh;
-  /* margin-top: 100vh; */
-  transform: rotate(180deg) scale(1.5);
-}
-
-/* @media screen and (min-width: 800px) {
-nav > ul {
-  transition: all 0s !important;
-}
-} */
 #popUp {
   z-index: 2;
   display: none;
@@ -520,7 +447,7 @@ nav > ul {
   color: #344563;
   font-size: 1rem;
 }
-#popUp a > img {
+#popUp a img {
   height: 18px;
   width: 18px;
   margin-left: 0.5rem;
@@ -529,6 +456,79 @@ nav > ul {
   display: flex;
 }
 
+#contact-title {
+  color: #172b4d;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+#contact-me form {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+#contact-me form * {
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #d0d9d4;
+  color: #6b778c;
+  font-size: 0.94rem;
+  font-family: "Inter", sans-serif;
+}
+#contact-me form *:focus-visible {
+  outline-color: #60c095;
+  color: black;
+}
+#contact-me form .alert * {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+#contact-me form .alert img {
+  width: 24px;
+}
+
+#footer-icons {
+  position: relative;
+}
+
+#footer-icons > svg:nth-child(1) {
+  position: absolute;
+  left: 0;
+  bottom: -12rem;
+}
+
+#footer-icons > svg:nth-child(2) {
+  position: absolute;
+  bottom: -5rem;
+  left: 15rem;
+}
+
+#footer-icons > svg:nth-child(3) {
+  position: absolute;
+  right: 0;
+  bottom: -10rem;
+}
+
+#background-icons > svg:nth-child(2n):hover {
+  cursor: pointer;
+  transform: rotate(360deg) scale(0.1);
+}
+
+#background-icons > svg:nth-child(2n+1):hover {
+  cursor: pointer;
+  height: 300vh;
+  /* margin-top: 100vh; */
+  transform: rotate(180deg) scale(1.5);
+}
+
+/* @media screen and (min-width: 800px) {
+nav > ul {
+  transition: all 0s !important;
+}
+} */
 @media screen and (min-width: 890px) {
   :root {
     --section-x-padding: 5rem;
@@ -540,13 +540,6 @@ nav > ul {
     justify-content: center;
   }
 
-  header > h1,
-#burger-container,
-#content > .btn-group,
-nav li:nth-child(1) {
-    display: none !important;
-  }
-
   nav > ul {
     transition: all 0s !important;
     display: flex;
@@ -556,10 +549,16 @@ nav li:nth-child(1) {
     font-size: inherit !important;
     padding-top: 0 !important;
   }
-
-  nav > ul > li {
+  nav > ul li {
     margin-top: 0;
     margin-bottom: 0;
+  }
+
+  header > h1,
+#burger-container,
+#content > .btn-group,
+nav li:nth-child(1) {
+    display: none !important;
   }
 
   #landing {
