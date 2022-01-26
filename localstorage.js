@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 Array.from(contactForm.elements).forEach(element => {
-    if (element.tagName == 'INPUT' || element.tagName == 'TEXTAREA') {
+    if (element.tagName == 'INPUT' || element.tagName == 'textarea') {
         element.addEventListener('input', saveToLocalStorage)
     }
 })
