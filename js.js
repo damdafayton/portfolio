@@ -66,7 +66,7 @@ closeBtn.addEventListener('click', toggleMenu);
 const navLinks = document.querySelectorAll('nav>ul>li>a');
 navLinks.forEach((link) => link.addEventListener('click', () => {
     nav.classList.remove('slide-left');
-    closeBtn.classList.add('d-none')
+    closeBtn.classList.add('opacity-0')
 }));
 
 // WORKS SECTION
