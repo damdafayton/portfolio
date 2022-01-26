@@ -393,9 +393,9 @@ h1 span:last-child {
 #contact-me > form {
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
-
-#contact-me > form > * {
+#contact-me > form * {
   padding: 1rem;
   border-radius: 4px;
   margin-bottom: 1.5rem;
@@ -404,10 +404,17 @@ h1 span:last-child {
   font-size: 0.94rem;
   font-family: "Inter", sans-serif;
 }
-
-#contact-me > form > *:focus-visible {
+#contact-me > form *:focus-visible {
   outline-color: #60c095;
   color: black;
+}
+#contact-me > form .alert * {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+#contact-me > form .alert img {
+  width: 24px;
 }
 
 #footer-icons {

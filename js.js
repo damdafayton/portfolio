@@ -73,17 +73,13 @@ navLinks.forEach((link) => link.addEventListener('click', () => {
 const myWorks = document.querySelectorAll('#my-works>.card-container>.card')
 myWorks.forEach((work, i) => {
     i = i + 1
-    console.log('NEW CARD LOOP = ', i)
     const subElements = work.querySelectorAll('*')
     subElements.forEach((element, ii) => {
-        console.log('card loop for elements >> ', i, element.tagName)
-        console.log(element)
         switch (element.tagName) {
             case 'IMG':
                 element.src = portfolioObj[i].screenshotUrl
                 return 0
             case 'H1':
-                console.log('h1 caught')
                 element.innerText = portfolioObj[i].name
                 return 0
             case 'UL':
