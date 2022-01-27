@@ -100,10 +100,10 @@ const body = document.querySelector('body')
 
 // Pop-up close button
 popUpClose.addEventListener('click', (e) => {
+    const uList = e.target.parentElement.querySelector('UL')
     popUp.classList.remove('show')
     body.classList.remove('body-blur')
     // Clean the list
-    const uList = e.target.parentElement.querySelector('UL')
     uList.innerHTML = ''
 })
 
