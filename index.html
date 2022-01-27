@@ -388,8 +388,7 @@
                 <rect x="0.5" width="48" height="4" rx="2" fill="#36B37E" />
             </svg>
         </div>
-        <div class="card-container">
-        </div>
+        <div class="card-container"></div>
     </section>
     <section id="about-me-section">
         <div id="about-me">
@@ -687,14 +686,19 @@
     <section id="contact-me-section">
         <div id="contact-me">
             <h1 id="contact-title">I'm always interested in hearing about new projects, so if you'd like to chat please
-                get
-                in touch.</h1>
+                get in touch.</h1>
             <form action="https://formspree.io/f/xqknezey" method="post">
                 <input type="text" name="name" placeholder="Full name" maxlength="30" required>
-                <input type="email" name="email" placeholder="Email address" required>
+                <input id="email" type="email" name="email" placeholder="Email address" required>
                 <textarea name="message" cols="30" rows="5" placeholder="Enter text here" maxlength="500"
                     required></textarea>
-                <button class="btn-green">Get in touch</button>
+                <div class="alert alert-danger d-flex align-items-center d-none" role="alert">
+                    <img class="me-3" src="./icons/alert.svg" alt="alert icons">
+                    <div class="text-start w-100">
+                    </div>
+                    <button type="button" class=" btn-close ms-2" aria-label="Close"></button>
+                </div>
+                <button type="submit" class="btn-green">Get in touch</button>
             </form>
         </div>
     </section>
@@ -888,6 +892,8 @@
         </div>
     </section>
     <script src="./js.js"></script>
+    <script src="./validation-client.js"></script>
+    <script src="./bootstrap.min.js"></script>
 </body>
 
 </html>

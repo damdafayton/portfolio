@@ -155,7 +155,7 @@ myWorks.forEach((work, i) => {
       case 'IMG':
         element.src = portfolioObj[i].screenshotUrl;
         return 0;
-      case 'H1':
+      case 'H2':
         element.innerText = portfolioObj[i].name;
         return 0;
       case 'UL':

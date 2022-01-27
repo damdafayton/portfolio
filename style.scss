@@ -1,3 +1,10 @@
+%portfolio-h2 {
+  font-size: 1.5rem;
+  margin: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 $text-color: #344563;
 $svgGray: #67798e;
 $svgGrayHover: #e5e2e2c2;
@@ -53,18 +60,6 @@ h1 {
   text-align: center;
 }
 
-section h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-
-%portfolio-h1 {
-  font-size: 1.5rem;
-  margin: 1rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 ul {
   padding: 0 !important;
 }
@@ -86,8 +81,13 @@ div > p {
   filter: blur(4px);
 }
 
-.card h1 {
-  @extend %portfolio-h1;
+section h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.card > h2 {
+  @extend %portfolio-h2;
 }
 
 .about-me-card > svg {
@@ -409,74 +409,6 @@ h1 span:last-child {
   left: calc(-1 * var(--section-x-padding));
 }
 
-#contact-title {
-  color: #172b4d;
-  font-weight: 700;
-  font-size: 2.5rem;
-  margin-bottom: 4rem;
-}
-
-#contact-me > form {
-  display: flex;
-  flex-direction: column;
-}
-
-#contact-me > form > * {
-  padding: 1rem;
-  border-radius: 4px;
-  margin-bottom: 1.5rem;
-  border: 1px solid #d0d9d4;
-  color: #6b778c;
-  font-size: 0.94rem;
-  font-family: "Inter", sans-serif;
-}
-
-#contact-me > form > *:focus-visible {
-  outline-color: #60c095;
-  color: black;
-}
-
-#footer-icons {
-  position: relative;
-}
-
-#footer-icons > svg:nth-child(1) {
-  position: absolute;
-  left: 0;
-  bottom: -12rem;
-}
-
-#footer-icons > svg:nth-child(2) {
-  position: absolute;
-  bottom: -5rem;
-  left: 15rem;
-}
-
-#footer-icons > svg:nth-child(3) {
-  position: absolute;
-  right: 0;
-  bottom: -10rem;
-}
-
-#background-icons > svg:nth-child(2n):hover {
-  cursor: pointer;
-  transform: rotate(360deg) scale(0.1);
-}
-
-#background-icons > svg:nth-child(2n + 1):hover {
-  cursor: pointer;
-  height: 300vh;
-
-  /* margin-top: 100vh; */
-  transform: rotate(180deg) scale(1.5);
-}
-
-/* @media screen and (min-width: 800px) {
-nav > ul {
-  transition: all 0s !important;
-}
-} */
-
 #popUp {
   z-index: 2;
   display: none;
@@ -531,8 +463,8 @@ nav > ul {
     }
   }
 
-  h1 {
-    @extend %portfolio-h1;
+  h2 {
+    @extend %portfolio-h2;
   }
 
   ul {
@@ -554,16 +486,101 @@ nav > ul {
     font-size: 1rem;
   }
 
-  a > img {
-    height: 18px;
-    width: 18px;
-    margin-left: 0.5rem;
+  a {
+    img {
+      height: 18px;
+      width: 18px;
+      margin-left: 0.5rem;
+    }
   }
 
   .btn-group {
     display: flex;
   }
 }
+
+#contact-title {
+  color: #172b4d;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+#contact-me {
+  form {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+
+    * {
+      padding: 1rem;
+      border-radius: 4px;
+      margin-bottom: 1.5rem;
+      border: 1px solid #d0d9d4;
+      color: #6b778c;
+      font-size: 0.94rem;
+      font-family: "Inter", sans-serif;
+
+      &:focus-visible {
+        outline-color: #60c095;
+        color: black;
+      }
+    }
+
+    .alert {
+      * {
+        padding: 0;
+        margin: 0;
+        border: 0;
+      }
+
+      img {
+        width: 24px;
+      }
+    }
+  }
+}
+
+#footer-icons {
+  position: relative;
+}
+
+#footer-icons > svg:nth-child(1) {
+  position: absolute;
+  left: 0;
+  bottom: -12rem;
+}
+
+#footer-icons > svg:nth-child(2) {
+  position: absolute;
+  bottom: -5rem;
+  left: 15rem;
+}
+
+#footer-icons > svg:nth-child(3) {
+  position: absolute;
+  right: 0;
+  bottom: -10rem;
+}
+
+#background-icons > svg:nth-child(2n):hover {
+  cursor: pointer;
+  transform: rotate(360deg) scale(0.1);
+}
+
+#background-icons > svg:nth-child(2n + 1):hover {
+  cursor: pointer;
+  height: 300vh;
+
+  /* margin-top: 100vh; */
+  transform: rotate(180deg) scale(1.5);
+}
+
+/* @media screen and (min-width: 800px) {
+nav > ul {
+transition: all 0s !important;
+}
+} */
 
 @media screen and (min-width: 890px) {
   :root {
@@ -576,18 +593,6 @@ nav > ul {
     justify-content: center;
   }
 
-  nav > ul > li {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  header > h1,
-  #burger-container,
-  #content > .btn-group,
-  nav li:nth-child(1) {
-    display: none !important;
-  }
-
   nav > ul {
     transition: all 0s !important;
     display: flex;
@@ -596,6 +601,18 @@ nav > ul {
     height: min-content !important;
     font-size: inherit !important;
     padding-top: 0 !important;
+
+    li {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  header > h1,
+  #burger-container,
+  #content > .btn-group,
+  nav li:nth-child(1) {
+    display: none !important;
   }
 
   #landing {
