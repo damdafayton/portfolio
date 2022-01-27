@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/backtofayton/portfolio.git"
+    "url": "git+https://github.com/damdafayton/portfolio.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/backtofayton/portfolio/issues"
+    "url": "https://github.com/damdafayton/portfolio/issues"
   },
-  "homepage": "https://github.com/backtofayton/portfolio#readme",
+  "homepage": "https://github.com/damdafayton/portfolio#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
