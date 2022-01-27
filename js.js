@@ -104,14 +104,6 @@ popUpClose.addEventListener('click', (e) => {
   uList.innerHTML = '';
 });
 
-function ulFiller(ul, portfolioOrder) {
-  portfolioObj[portfolioOrder].tech.forEach((newTech) => {
-    // console.log('add newTech: ', newTech)
-    const listElement = techListElementCreator(newTech);
-    ul.appendChild(listElement);
-  });
-}
-
 // Portfolio pop-up handler
 const myWorks = document.querySelectorAll('#my-works>.card-container>.card');
 function portfolioPopUp(e) {
@@ -158,7 +150,7 @@ myWorks.forEach((work, i) => {
       case 'IMG':
         element.src = portfolioObj[i].screenshotUrl;
         return 0;
-      case 'H1':
+      case 'H2':
         element.innerText = portfolioObj[i].name;
         return 0;
       case 'UL':
