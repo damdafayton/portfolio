@@ -215,6 +215,7 @@ h1 span:last-child {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  justify-content: space-between;
 }
 
 .tech {
@@ -236,6 +237,7 @@ h1 span:last-child {
 
 .about-me-card {
   background-color: #ebf0ee !important;
+  justify-content: start;
 }
 .about-me-card svg {
   height: 10rem;
