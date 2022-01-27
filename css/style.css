@@ -1,10 +1,4 @@
-
-.about-me-card h2 {
-  margin-top: 0;
-}
-
-.card > h2,
-#popUp h2 {
+#popUp h2, .card > h2 {
   font-size: 1.5rem;
   margin: 1rem;
   overflow: hidden;
@@ -41,12 +35,10 @@ body {
   text-align: center;
   overflow-x: hidden;
 }
-
 body section {
   padding: 0 var(--section-x-padding);
   padding-top: 4rem;
 }
-
 body section:nth-of-type(1) {
   padding-top: 0;
 }
@@ -87,7 +79,7 @@ section h1 {
 }
 
 header {
-  z-index: 1;
+  z-index: 2;
   box-sizing: border-box;
   margin: 0;
   padding: 0.5rem 1.5rem;
@@ -99,7 +91,6 @@ header {
   width: 100%;
   font-size: 0.8rem;
 }
-
 header nav > ul {
   transition: margin-left 1s;
   margin-left: 110vw;
@@ -117,7 +108,6 @@ header nav > ul {
   padding-top: 5rem;
   padding-left: 1rem;
 }
-
 header nav > ul li {
   margin: 1.6rem 1.8rem;
   font-weight: 600;
@@ -132,12 +122,10 @@ header nav > ul li {
   color: #67798e;
   cursor: pointer;
 }
-
 .svgClose:hover {
   background-color: #e5e2e2c2;
   border-radius: 4px;
 }
-
 .svgClose:active {
   background-color: #c3c0c0c7 !important;
   border-radius: 4px;
@@ -156,12 +144,10 @@ section div img {
   cursor: pointer;
   padding: 0.5rem;
 }
-
 #burger-container:hover {
   background-color: #e5e2e2c2;
   border-radius: 4px;
 }
-
 #burger-container:hover:active {
   background-color: #c3c0c0c7;
   border-radius: 4px;
@@ -188,19 +174,17 @@ section li img {
 #landing > h1,
 #landing-p {
   animation: im-developer 2s ease-out;
-  z-index: -1;
+  z-index: 1;
 }
 
 @keyframes im-developer {
   0% {
     transform: scale(0.1);
   }
-
   100% {
     transform: scale(1);
   }
 }
-
 h1 span {
   font-size: 2.5rem;
   text-align: center;
@@ -253,10 +237,12 @@ h1 span:last-child {
 .about-me-card {
   background-color: #ebf0ee !important;
 }
-
 .about-me-card svg {
   height: 10rem;
   width: 100%;
+}
+.about-me-card h2 {
+  margin-top: 0;
 }
 
 .card .about-me-tag {
@@ -305,17 +291,14 @@ h1 span:last-child {
   position: relative;
   z-index: -1;
 }
-
 #about-me .about-me-svg {
   position: absolute;
   transition: height 1.5s linear 0.5s, transform 0.4s linear;
 }
-
 #about-me .about-me-svg:nth-child(4) {
   top: -4rem;
   right: calc(-1 * var(--section-x-padding));
 }
-
 #about-me .about-me-svg:nth-child(5) {
   bottom: -0.8rem;
   left: calc(-1 * var(--section-x-padding));
@@ -333,7 +316,6 @@ h1 span:last-child {
   text-align: center;
   justify-content: center;
 }
-
 #popUp #content {
   position: relative;
   text-align: left;
@@ -348,7 +330,6 @@ h1 span:last-child {
   overflow-y: scroll;
   margin-bottom: 0;
 }
-
 #popUp .svgClose {
   position: absolute;
   right: 2rem;
@@ -356,31 +337,28 @@ h1 span:last-child {
   align-self: end;
   width: 24px;
   color: white;
+  background-color: #e5e2e2c2;
+  border-radius: 4px;
 }
-
 #popUp .svgClose:hover {
-  background-color: rgba(32, 31, 31, 0.75);
+  background-color: #c3c0c0c7 !important;
 }
-
 #popUp .svgClose:hover:active {
-  background-color: black !important;
+  background-color: rgba(32, 31, 31, 0.75) !important;
+  color: white;
 }
-
 #popUp #popUpTitle {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 #popUp #popUpTitle span {
   display: none;
 }
-
 #popUp ul {
   justify-content: start;
   margin-left: -0.3rem;
 }
-
 #popUp .btn-green {
   font-size: 0.9rem !important;
   padding: 0.5rem 0.7rem !important;
@@ -389,18 +367,15 @@ h1 span:last-child {
   flex: 1;
   align-items: center;
 }
-
 #popUp p {
   color: #344563;
   font-size: 1rem;
 }
-
 #popUp a img {
   height: 18px;
   width: 18px;
   margin-left: 0.5rem;
 }
-
 #popUp .btn-group {
   display: flex;
 }
@@ -417,7 +392,6 @@ h1 span:last-child {
   flex-direction: column;
   z-index: 1;
 }
-
 #contact-me form * {
   padding: 1rem;
   border-radius: 4px;
@@ -427,18 +401,15 @@ h1 span:last-child {
   font-size: 0.94rem;
   font-family: "Inter", sans-serif;
 }
-
 #contact-me form *:focus-visible {
   outline-color: #60c095;
   color: black;
 }
-
 #contact-me form .alert * {
   padding: 0;
   margin: 0;
   border: 0;
 }
-
 #contact-me form .alert img {
   width: 24px;
 }
@@ -447,49 +418,51 @@ h1 span:last-child {
   position: relative;
   overflow-x: clip;
 }
-
 #background-icons .background-images {
   position: absolute;
+  transition: height 1.5s linear 0.5s, transform 0.4s linear;
 }
-
+#background-icons .background-images:nth-child(2n):hover {
+  cursor: pointer;
+  transform: rotate(360deg) scale(0.1);
+}
+#background-icons .background-images:nth-child(2n+1):hover {
+  cursor: pointer;
+  height: 300vh;
+  /* margin-top: 100vh; */
+  transform: rotate(180deg) scale(1.5);
+}
 #background-icons .background-images:nth-child(1) {
   right: 0;
   top: calc(3.5rem - var(--navbar-margin));
 }
-
 #background-icons .background-images:nth-child(3) {
   left: 0;
   top: calc(32rem - var(--navbar-margin));
 }
-
 #background-icons .background-images:nth-child(2) {
   right: -75px;
   top: calc(15rem - var(--navbar-margin));
   width: 100px;
 }
-
 #background-icons .background-images:nth-child(4) {
   left: 1rem;
   top: calc(20rem - var(--navbar-margin));
 }
-
 #background-icons .background-images:nth-child(5) {
   left: 12rem;
   top: calc(31.2rem - var(--navbar-margin));
 }
-
 #background-icons .background-images:nth-child(6) {
   right: 0;
   top: calc(37rem - var(--navbar-margin));
 }
-
 #background-icons .background-images:nth-child(7) {
   width: 15rem;
   left: 0;
   top: calc(7rem - var(--navbar-margin));
   display: none;
 }
-
 #background-icons .background-images:nth-child(8) {
   left: -20%;
   top: calc(-1 * var(--navbar-margin));
@@ -500,62 +473,40 @@ h1 span:last-child {
   animation: lines 4s ease-in-out 1;
 }
 
-#background-icons .background-images:nth-child(2n):hover {
-  cursor: pointer;
-  transform: rotate(360deg) scale(0.1);
-}
-
-#background-icons .background-images:nth-child(2n+1):hover {
-  cursor: pointer;
-  height: 300vh;
-
-  /* margin-top: 100vh; */
-  transform: rotate(180deg) scale(1.5);
-}
-
 @keyframes lines {
   0% {
     opacity: 0;
   }
-
   49% {
     opacity: 0;
   }
-
   50% {
     opacity: 1;
-
     /* display: block; */
     transform: scale(1.5);
   }
-
   75% {
     /* display: block; */
     transform: scale(0.7);
   }
-
   100% {
     transform: scale(1);
   }
 }
-
 #footer-icons {
   position: relative;
   display: none;
 }
-
 #footer-icons svg:nth-child(1) {
   position: absolute;
   left: 0;
   bottom: -12rem;
 }
-
 #footer-icons svg:nth-child(2) {
   position: absolute;
   bottom: -5rem;
   left: 15rem;
 }
-
 #footer-icons svg:nth-child(3) {
   position: absolute;
   right: 0;
@@ -582,16 +533,15 @@ h1 span:last-child {
     font-size: inherit !important;
     padding-top: 0 !important;
   }
-
   nav > ul li {
     margin-top: 0;
     margin-bottom: 0;
   }
 
   header > h1,
-  #burger-container,
-  #content > .btn-group,
-  nav li:nth-child(1) {
+#burger-container,
+#content > .btn-group,
+nav li:nth-child(1) {
     display: none !important;
   }
 
@@ -599,24 +549,21 @@ h1 span:last-child {
     padding: 0 8rem;
   }
 
-  #background-icons > svg:nth-child(1) {
+  #background-icons .background-images:nth-child(1) {
     right: 5rem;
     top: -3rem;
   }
-
-  #background-icons > svg:nth-child(2) {
+  #background-icons .background-images:nth-child(2) {
     right: 0;
     top: 10rem;
     width: 9rem;
   }
-
-  #background-icons > svg:nth-child(4) {
+  #background-icons .background-images:nth-child(4) {
     left: 16rem;
     top: 4rem;
     opacity: 60%;
   }
-
-  #background-icons > svg:nth-child(6) {
+  #background-icons .background-images:nth-child(6) {
     right: 11rem;
     top: 30rem;
     width: 8rem;
@@ -635,7 +582,7 @@ h1 span:last-child {
   }
 
   #footer-icons,
-  #background-icons > svg:nth-child(7) {
+#background-icons > .background-images:nth-child(7) {
     display: block;
   }
 
@@ -649,20 +596,19 @@ h1 span:last-child {
     border-radius: 4px;
     margin: 0;
   }
-
   #popUp .svgClose:hover {
     background-color: #c3c0c0c7 !important;
   }
-
   #popUp .svgClose:hover:active {
-    background-color: #c3c0c0c7 !important;
+    background-color: rgba(32, 31, 31, 0.75) !important;
+    color: white;
   }
-
   #popUp #content {
     width: 80%;
   }
-
   #popUp #popUpTitle span {
     display: block !important;
   }
 }
+
+/*# sourceMappingURL=style.css.map */

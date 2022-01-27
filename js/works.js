@@ -52,7 +52,7 @@ const portfolioObj = {
 
 // CREATE PORTFOLIO CARDS
 const cardContainer = document.querySelector('#my-works > .card-container');
-// Create card section based on the amount of projects
+// Create cards based on the amount of projects
 Object.keys(portfolioObj).forEach(() => {
   cardContainer.innerHTML += (`
     <div class= "card">
@@ -147,7 +147,7 @@ const popUpClose = document.querySelector('#popUp .svgClose');
 const body = document.querySelector('body');
 
 popUpClose.addEventListener('click', (e) => {
-  const uList = e.target.parentElement.querySelector('UL');
+  const uList = e.currentTarget.parentElement.querySelector('UL');
   popUp.classList.remove('show');
   body.classList.remove('body-blur');
   // Clean the list

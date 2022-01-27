@@ -6,10 +6,11 @@
 }
 
 $text-color: #344563;
-$svgGray: #67798e;
-$svgGrayHover: #e5e2e2c2;
-$svgWhiteHover: rgb(32 31 31 / 75%);
-$svgGrayActive: #c3c0c0c7;
+$svgX: #67798e;
+$svgWhiteHover: #e5e2e2c2;
+$svgDarkHover: rgb(32 31 31 / 75%);
+$svgWhiteActive: #c3c0c0c7;
+$svgGrayActive: #c7c6c6fc;
 
 :root {
   --section-x-padding: 1.5rem;
@@ -91,7 +92,7 @@ section h1 {
 }
 
 header {
-  z-index: 1;
+  z-index: 2;
   box-sizing: border-box;
   margin: 0;
   padding: 0.5rem 1.5rem;
@@ -133,16 +134,16 @@ header {
   position: static;
   margin-right: 0.8rem;
   margin-top: 0.8rem;
-  color: $svgGray;
+  color: $svgX;
   cursor: pointer;
 
   &:hover {
-    background-color: $svgGrayHover;
+    background-color: $svgWhiteHover;
     border-radius: 4px;
   }
 
   &:active {
-    background-color: $svgGrayActive !important;
+    background-color: $svgWhiteActive !important;
     border-radius: 4px;
   }
 }
@@ -166,7 +167,7 @@ section div img {
   }
 
   &:hover:active {
-    background-color: $svgGrayActive;
+    background-color: $svgWhiteActive;
     border-radius: 4px;
   }
 }
@@ -192,7 +193,7 @@ section li img {
 #landing > h1,
 #landing-p {
   animation: im-developer 2s ease-out;
-  z-index: -1;
+  z-index: 1;
 }
 
 @keyframes im-developer {
@@ -364,12 +365,16 @@ h1 span:last-child {
     width: 24px;
     color: white;
 
+    background-color: $svgWhiteHover;
+    border-radius: 4px;
+
     &:hover {
-      background-color: $svgWhiteHover;
+      background-color: $svgWhiteActive !important;
     }
 
     &:hover:active {
-      background-color: black !important;
+      background-color: $svgDarkHover !important;
+      color: white;
     }
   }
 
@@ -467,6 +472,21 @@ h1 span:last-child {
 
   .background-images {
     position: absolute;
+    transition: height 1.5s linear 0.5s, transform 0.4s linear;
+    // z-index: -1;
+
+    &:nth-child(2n):hover {
+      cursor: pointer;
+      transform: rotate(360deg) scale(0.1);
+    }
+
+    &:nth-child(2n + 1):hover {
+      cursor: pointer;
+      height: 300vh;
+
+      /* margin-top: 100vh; */
+      transform: rotate(180deg) scale(1.5);
+    }
   }
 
   .background-images:nth-child(1) {
@@ -515,19 +535,6 @@ h1 span:last-child {
     height: 100vh;
     z-index: -1;
     animation: lines 4s ease-in-out 1;
-  }
-
-  .background-images:nth-child(2n):hover {
-    cursor: pointer;
-    transform: rotate(360deg) scale(0.1);
-  }
-
-  .background-images:nth-child(2n + 1):hover {
-    cursor: pointer;
-    height: 300vh;
-
-    /* margin-top: 100vh; */
-    transform: rotate(180deg) scale(1.5);
   }
 }
 
@@ -617,28 +624,30 @@ h1 span:last-child {
     padding: 0 8rem;
   }
 
-  #background-icons > svg:nth-child(1) {
-    right: 5rem;
-    top: -3rem;
-  }
+  #background-icons {
+    .background-images:nth-child(1) {
+      right: 5rem;
+      top: -3rem;
+    }
 
-  #background-icons > svg:nth-child(2) {
-    right: 0;
-    top: 10rem;
-    width: 9rem;
-  }
+    .background-images:nth-child(2) {
+      right: 0;
+      top: 10rem;
+      width: 9rem;
+    }
 
-  #background-icons > svg:nth-child(4) {
-    left: 16rem;
-    top: 4rem;
-    opacity: 60%;
-  }
+    .background-images:nth-child(4) {
+      left: 16rem;
+      top: 4rem;
+      opacity: 60%;
+    }
 
-  #background-icons > svg:nth-child(6) {
-    right: 11rem;
-    top: 30rem;
-    width: 8rem;
-    height: auto;
+    .background-images:nth-child(6) {
+      right: 11rem;
+      top: 30rem;
+      width: 8rem;
+      height: auto;
+    }
   }
 
   .card-container {
@@ -653,7 +662,7 @@ h1 span:last-child {
   }
 
   #footer-icons,
-  #background-icons > svg:nth-child(7) {
+  #background-icons > .background-images:nth-child(7) {
     display: block;
   }
 
@@ -663,17 +672,18 @@ h1 span:last-child {
       display: block;
       position: static;
       width: 24px !important;
-      color: $svgGray;
-      background-color: $svgGrayHover;
+      color: $svgX;
+      background-color: $svgWhiteHover;
       border-radius: 4px;
       margin: 0;
 
       &:hover {
-        background-color: $svgGrayActive !important;
+        background-color: $svgWhiteActive !important;
       }
 
       &:hover:active {
-        background-color: $svgGrayActive !important;
+        background-color: $svgDarkHover !important;
+        color: white;
       }
     }
 
