@@ -102,9 +102,9 @@ function portfolioPopUp(e) {
   let n = 0;
   // Find the order of clicked item among all the works
   myWorks.forEach((work, i) => {
-    e.target.parentElement === work ? (n = i) : null;
+    if (e.target.parentElement === work) { n = i; }
   });
-  n++; // to adjust for object order
+  n += 1; // to adjust for object order
 
   const popUpElements = popUp.querySelectorAll('*');
   popUpElements.forEach((element) => {
@@ -122,6 +122,9 @@ function portfolioPopUp(e) {
         element.firstElementChild.innerText = portfolioObj[n].name;
         element.lastElementChild.firstElementChild.href = portfolioObj[n].linkToLive;
         element.lastElementChild.lastElementChild.href = portfolioObj[n].linkToSource;
+        break;
+      default:
+        break;
     }
   });
 
@@ -132,17 +135,13 @@ function portfolioPopUp(e) {
 // WORKS SECTION
 myWorks.forEach((work, i) => {
   i += 1;
-  console.log('NEW CARD LOOP = ', i);
   const subElements = work.querySelectorAll('*');
   subElements.forEach((element) => {
-    console.log('card loop for elements >> ', i, element.tagName);
-    console.log(element);
     switch (element.tagName) {
       case 'IMG':
         element.src = portfolioObj[i].screenshotUrl;
         return 0;
       case 'H1':
-        console.log('h1 caught');
         element.innerText = portfolioObj[i].name;
         return 0;
       case 'UL':
