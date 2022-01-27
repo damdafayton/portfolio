@@ -18,4 +18,8 @@ closeButtons.forEach((button) => {
   button.addEventListener('click', (e) => {
     e.target.parentElement.classList.add('d-none');
   });
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 64055bd1ddcda399bdd60a6711f01025affd7367
