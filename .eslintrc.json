@@ -27,6 +27,9 @@
   "ignorePatterns": [
     "dist/",
     "build/",
-    "bootstrap.min.js"
+    "node_modules",
+    "css/bootstrap.min.js",
+    "css/bootstrap.min.js.map",
+    "package.json"
   ]
 }

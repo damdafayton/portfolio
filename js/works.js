@@ -50,26 +50,7 @@ const portfolioObj = {
   },
 };
 
-// NAVBAR SECTION
-const nav = document.querySelector('nav > ul');
-const burger = document.querySelector('#burger-container');
-const closeBtn = document.querySelector('.svgClose');
-
-function toggleMenu() {
-  nav.classList.toggle('slide-left');
-  closeBtn.classList.toggle('opacity-0');
-}
-
-burger.addEventListener('click', toggleMenu);
-closeBtn.addEventListener('click', toggleMenu);
-
-const navLinks = document.querySelectorAll('nav>ul>li>a');
-navLinks.forEach((link) => link.addEventListener('click', () => {
-  nav.classList.remove('slide-left');
-  closeBtn.classList.add('opacity-0');
-}));
-
-// FILL PROJECT DIVS
+// CREATE PORTFOLIO CARDS
 const cardContainer = document.querySelector('#my-works > .card-container');
 // Create card section based on the amount of projects
 Object.keys(portfolioObj).forEach(() => {
@@ -81,47 +62,9 @@ Object.keys(portfolioObj).forEach(() => {
       <a class="btn-green" href="#">See Project</a>
     </div>
   `);
-})
-// WORKS SECTION
-const myWorks = document.querySelectorAll('#my-works>.card-container>.card');
-myWorks.forEach((work, i) => {
-  i += 1;
-  const subElements = work.querySelectorAll('*');
-  subElements.forEach((element, ii) => {
-    switch (element.tagName) {
-      case 'IMG':
-        element.src = portfolioObj[i].screenshotUrl;
-        return 0;
-      case 'H2':
-        element.innerText = portfolioObj[i].name;
-        return 0;
-      case 'UL':
-        ulFiller(element, i);
-        return 0;
-      case 'A':
-        // Click button for portfolio popup
-        element.addEventListener('click', portfolioPopUp);
-        return 0;
-      default:
-        return 0;
-    }
-  });
 });
 
-// POPUP SECTION
-const popUp = document.querySelector('#popUp');
-const popUpClose = document.querySelector('#popUp .svgClose');
-const body = document.querySelector('body');
-
-// Pop-up close button
-popUpClose.addEventListener('click', (e) => {
-  const uList = e.target.parentElement.querySelector('UL')
-  popUp.classList.remove('show')
-  body.classList.remove('body-blur')
-  // Clean the list
-  uList.innerHTML = ''
-})
-
+// FILL PORTFOLIO CARDS
 function techListElementCreator(tech) {
   const listItem = document.createElement('li');
   listItem.innerText = tech;
@@ -137,7 +80,9 @@ function ulFiller(ul, portfolioOrder) {
   });
 }
 
-// Portfolio pop-up handler
+const myWorks = document.querySelectorAll('#my-works>.card-container>.card');
+const popUp = document.querySelector('#popUp');
+
 function portfolioPopUp(e) {
   e.preventDefault();
   let n = 0;
@@ -172,3 +117,39 @@ function portfolioPopUp(e) {
   popUp.classList.add('show');
   // body.classList.add('body-blur')
 }
+
+myWorks.forEach((work, i) => {
+  i += 1;
+  const subElements = work.querySelectorAll('*');
+  subElements.forEach((element) => {
+    switch (element.tagName) {
+      case 'IMG':
+        element.src = portfolioObj[i].screenshotUrl;
+        return 0;
+      case 'H2':
+        element.innerText = portfolioObj[i].name;
+        return 0;
+      case 'UL':
+        ulFiller(element, i);
+        return 0;
+      case 'A':
+        // Click button for portfolio popup
+        element.addEventListener('click', portfolioPopUp);
+        return 0;
+      default:
+        return 0;
+    }
+  });
+});
+
+// PORTFOLIO DETAILS POPUP CLOSE BUTTON
+const popUpClose = document.querySelector('#popUp .svgClose');
+const body = document.querySelector('body');
+
+popUpClose.addEventListener('click', (e) => {
+  const uList = e.target.parentElement.querySelector('UL');
+  popUp.classList.remove('show');
+  body.classList.remove('body-blur');
+  // Clean the list
+  uList.innerHTML = '';
+});
