@@ -75,6 +75,25 @@ navLinks.forEach((link) => link.addEventListener('click', () => {
   closeBtn.classList.add('opacity-0');
 }));
 
+// FILL PROJECT DIVS
+const cardContainer = document.querySelector('#my-works > .card-container');
+// Create card section based on the amount of projects
+Object.keys(portfolioObj).forEach(() => {
+  cardContainer.innerHTML += (`
+    <div class= "card">
+    <img alt="screenhost of my work" src="#">
+      <h1></h1>
+      <ul class="tech"></ul>
+      <a class="btn-green" href="#">See Project</a>
+    </div>
+  `);
+});
+
+// POPUP SECTION
+const popUp = document.querySelector('#popUp');
+const popUpClose = document.querySelector('#popUp .svgClose');
+const body = document.querySelector('body');
+
 function techListElementCreator(tech) {
   const listItem = document.createElement('li');
   listItem.innerText = tech;
@@ -89,20 +108,6 @@ function ulFiller(ul, portfolioOrder) {
     ul.appendChild(listElement);
   });
 }
-
-// POPUP SECTION
-const popUp = document.querySelector('#popUp');
-const popUpClose = document.querySelector('#popUp .svgClose');
-const body = document.querySelector('body');
-
-// Pop-up close button
-popUpClose.addEventListener('click', (e) => {
-  popUp.classList.remove('show');
-  body.classList.remove('body-blur');
-  // Clean the list
-  const uList = e.target.parentElement.querySelector('UL');
-  uList.innerHTML = '';
-});
 
 // Portfolio pop-up handler
 const myWorks = document.querySelectorAll('#my-works>.card-container>.card');
