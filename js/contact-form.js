@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     contactForm.elements.email.value = formData.formEmail;
     contactForm.elements.message.value = formData.formText;
   }
-});
+})
 
 Array.from(contactForm.elements).forEach((element) => {
   if (element.tagName === 'INPUT' || element.tagName === 'textarea') {
