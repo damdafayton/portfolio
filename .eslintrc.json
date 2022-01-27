@@ -28,8 +28,8 @@
     "dist/",
     "build/",
     "node_modules",
-    "css/bootstrap.min.js",
-    "css/bootstrap.min.js.map",
+    "js/bootstrap.min.js",
+    "js/bootstrap.min.js.map",
     "package.json"
   ]
 }

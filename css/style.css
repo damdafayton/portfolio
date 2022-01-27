@@ -1,5 +1,5 @@
-#popUp h2,
-.card > h2 {
+.card > h2,
+#popUp h2 {
   font-size: 1.5rem;
   margin: 1rem;
   overflow: hidden;
