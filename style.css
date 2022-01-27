@@ -53,8 +53,7 @@ section h1 {
 }
 
 .card h1,
-#popUp h1
- {
+#popUp h1 {
   font-size: 1.5rem;
   margin: 1rem;
   overflow: hidden;
