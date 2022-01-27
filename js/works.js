@@ -2,8 +2,7 @@
 const portfolioObj = {
   1: {
     name: 'Uber',
-    description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum iure assumenda natus officiis, suscipit rerum repudiandae optio magni a aliquid eveniet ea commodi sed mollitia accusamus incidunt similique unde expedita.',
+    description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum iure assumenda natus officiis, suscipit rerum repudiandae optio magni a aliquid eveniet ea commodi sed mollitia accusamus incidunt similique unde expedita.',
     screenshotUrl: './works/work1.jpg',
     tech: ['Ruby on rails', 'HTML', 'JavaScript', 'CSS'],
     linkToLive: 'http://www.uber.com',
@@ -11,8 +10,7 @@ const portfolioObj = {
   },
   2: {
     name: 'Facebook',
-    description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum iure assumenda natus officiis, suscipit rerum repudiandae optio magni a aliquid eveniet ea commodi sed mollitia accusamus incidunt similique unde expedita.',
+    description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum iure assumenda natus officiis, suscipit rerum repudiandae optio magni a aliquid eveniet ea commodi sed mollitia accusamus incidunt similique unde expedita.',
     screenshotUrl: './works/work2.jpg',
     tech: ['Ruby on rails', 'HTML', 'JavaScript', 'CSS'],
     linkToLive: 'http://www.facebook.com',
@@ -20,8 +18,7 @@ const portfolioObj = {
   },
   3: {
     name: 'New Uber',
-    description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum iure assumenda natus officiis, suscipit rerum repudiandae optio magni a aliquid eveniet ea commodi sed mollitia accusamus incidunt similique unde expedita.',
+    description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum iure assumenda natus officiis, suscipit rerum repudiandae optio magni a aliquid eveniet ea commodi sed mollitia accusamus incidunt similique unde expedita.',
     screenshotUrl: './works/work1.jpg',
     tech: ['Ruby on rails', 'HTML', 'JavaScript', 'CSS'],
     linkToLive: 'http://www.uber.com',
@@ -29,8 +26,7 @@ const portfolioObj = {
   },
   4: {
     name: 'New Facebook',
-    description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum iure assumenda natus officiis, suscipit rerum repudiandae optio magni a aliquid eveniet ea commodi sed mollitia accusamus incidunt similique unde expedita.',
+    description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum iure assumenda natus officiis, suscipit rerum repudiandae optio magni a aliquid eveniet ea commodi sed mollitia accusamus incidunt similique unde expedita.',
     screenshotUrl: './works/work2.jpg',
     tech: ['Ruby on rails', 'HTML', 'JavaScript', 'CSS'],
     linkToLive: 'http://www.facebook.com',
@@ -38,8 +34,7 @@ const portfolioObj = {
   },
   5: {
     name: 'Another Uber',
-    description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum iure assumenda natus officiis, suscipit rerum repudiandae optio magni a aliquid eveniet ea commodi sed mollitia accusamus incidunt similique unde expedita.',
+    description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum iure assumenda natus officiis, suscipit rerum repudiandae optio magni a aliquid eveniet ea commodi sed mollitia accusamus incidunt similique unde expedita.',
     screenshotUrl: './works/work1.jpg',
     tech: ['Ruby on rails', 'HTML', 'JavaScript', 'CSS'],
     linkToLive: 'http://www.uber.com',
@@ -47,8 +42,7 @@ const portfolioObj = {
   },
   6: {
     name: 'Another Facebook',
-    description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum iure assumenda natus officiis, suscipit rerum repudiandae optio magni a aliquid eveniet ea commodi sed mollitia accusamus incidunt similique unde expedita.',
+    description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum iure assumenda natus officiis, suscipit rerum repudiandae optio magni a aliquid eveniet ea commodi sed mollitia accusamus incidunt similique unde expedita.',
     screenshotUrl: './works/work2.jpg',
     tech: ['Ruby on rails', 'HTML', 'JavaScript', 'CSS'],
     linkToLive: 'http://www.facebook.com',
@@ -56,44 +50,21 @@ const portfolioObj = {
   },
 };
 
-// NAVBAR SECTION
-const nav = document.querySelector('nav > ul');
-const burger = document.querySelector('#burger-container');
-const closeBtn = document.querySelector('.svgClose');
-
-function toggleMenu() {
-  nav.classList.toggle('slide-left');
-  closeBtn.classList.toggle('opacity-0');
-}
-
-burger.addEventListener('click', toggleMenu);
-closeBtn.addEventListener('click', toggleMenu);
-
-const navLinks = document.querySelectorAll('nav>ul>li>a');
-navLinks.forEach((link) => link.addEventListener('click', () => {
-  nav.classList.remove('slide-left');
-  closeBtn.classList.add('opacity-0');
-}));
-
-// FILL PROJECT DIVS
+// CREATE PORTFOLIO CARDS
 const cardContainer = document.querySelector('#my-works > .card-container');
 // Create card section based on the amount of projects
 Object.keys(portfolioObj).forEach(() => {
   cardContainer.innerHTML += (`
     <div class= "card">
     <img alt="screenhost of my work" src="#">
-      <h1></h1>
+      <h2></h2>
       <ul class="tech"></ul>
       <a class="btn-green" href="#">See Project</a>
     </div>
   `);
 });
 
-// POPUP SECTION
-const popUp = document.querySelector('#popUp');
-const popUpClose = document.querySelector('#popUp .svgClose');
-const body = document.querySelector('body');
-
+// FILL PORTFOLIO CARDS
 function techListElementCreator(tech) {
   const listItem = document.createElement('li');
   listItem.innerText = tech;
@@ -109,8 +80,9 @@ function ulFiller(ul, portfolioOrder) {
   });
 }
 
-// Portfolio pop-up handler
 const myWorks = document.querySelectorAll('#my-works>.card-container>.card');
+const popUp = document.querySelector('#popUp');
+
 function portfolioPopUp(e) {
   e.preventDefault();
   let n = 0;
@@ -146,7 +118,6 @@ function portfolioPopUp(e) {
   // body.classList.add('body-blur')
 }
 
-// WORKS SECTION
 myWorks.forEach((work, i) => {
   i += 1;
   const subElements = work.querySelectorAll('*');
@@ -171,11 +142,14 @@ myWorks.forEach((work, i) => {
   });
 });
 
-// Pop-up close button
+// PORTFOLIO DETAILS POPUP CLOSE BUTTON
+const popUpClose = document.querySelector('#popUp .svgClose');
+const body = document.querySelector('body');
+
 popUpClose.addEventListener('click', (e) => {
+  const uList = e.target.parentElement.querySelector('UL');
   popUp.classList.remove('show');
   body.classList.remove('body-blur');
   // Clean the list
-  const uList = e.target.parentElement.querySelector('UL');
   uList.innerHTML = '';
 });

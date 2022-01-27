@@ -1,15 +1,15 @@
-%portfolio-h2 {
+
+.about-me-card h2 {
+  margin-top: 0;
+}
+
+.card > h2,
+#popUp h2 {
   font-size: 1.5rem;
   margin: 1rem;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-$text-color: #344563;
-$svgGray: #67798e;
-$svgGrayHover: #e5e2e2c2;
-$svgWhiteHover: rgb(32 31 31 / 75%);
-$svgGrayActive: #c3c0c0c7;
 
 :root {
   --section-x-padding: 1.5rem;
@@ -40,15 +40,15 @@ body {
   font-family: "Inter", sans-serif;
   text-align: center;
   overflow-x: hidden;
+}
 
-  section {
-    padding: 0 var(--section-x-padding);
-    padding-top: 4rem;
+body section {
+  padding: 0 var(--section-x-padding);
+  padding-top: 4rem;
+}
 
-    &:nth-of-type(1) {
-      padding-top: 0;
-    }
-  }
+body section:nth-of-type(1) {
+  padding-top: 0;
 }
 
 li {
@@ -86,99 +86,6 @@ section h1 {
   font-size: 2.5rem;
 }
 
-.card > h2 {
-  @extend %portfolio-h2;
-}
-
-.about-me-card > svg {
-  height: 10rem;
-  width: 100%;
-}
-
-#background-icons {
-  position: relative;
-  overflow-x: clip;
-}
-
-#background-icons > svg,
-#about-me > svg {
-  position: absolute;
-  transition: height 1.5s linear 0.5s, transform 0.4s linear;
-}
-
-#background-icons > svg:nth-child(1) {
-  right: 0;
-  top: calc(3.5rem - var(--navbar-margin));
-}
-
-#background-icons > svg:nth-child(3) {
-  left: 0;
-  top: calc(32rem - var(--navbar-margin));
-}
-
-#background-icons > svg:nth-child(2) {
-  right: -75px;
-  top: calc(15rem - var(--navbar-margin));
-  width: 100px;
-}
-
-#background-icons > svg:nth-child(4) {
-  left: 1rem;
-  top: calc(20rem - var(--navbar-margin));
-}
-
-#background-icons > svg:nth-child(5) {
-  left: 12rem;
-  top: calc(31.2rem - var(--navbar-margin));
-}
-
-#background-icons > svg:nth-child(6) {
-  right: 0;
-  top: calc(37rem - var(--navbar-margin));
-}
-
-#background-icons > svg:nth-child(7) {
-  width: 15rem;
-  left: 0;
-  top: calc(7rem - var(--navbar-margin));
-}
-
-#background-icons > svg:nth-child(8) {
-  left: -20%;
-  top: calc(-1 * var(--navbar-margin));
-  bottom: 0;
-  width: 140%;
-  height: 100vh;
-  z-index: -1;
-  animation: lines 4s ease-in-out 1;
-}
-
-@keyframes lines {
-  0% {
-    opacity: 0;
-  }
-
-  49% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-
-    /* display: block; */
-    transform: scale(1.5);
-  }
-
-  75% {
-    /* display: block; */
-    transform: scale(0.7);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
 header {
   z-index: 1;
   box-sizing: border-box;
@@ -191,35 +98,30 @@ header {
   top: 0;
   width: 100%;
   font-size: 0.8rem;
-
-  nav > ul {
-    transition: margin-left 1s;
-    margin-left: 110vw;
-    margin-top: 0;
-    position: absolute;
-    height: 100vh;
-    top: 0;
-    right: 0;
-    left: 0;
-    background-color: white;
-    font-size: 2.8rem;
-    font-weight: 600;
-    text-align: left;
-    z-index: 100;
-    padding-top: 5rem;
-    padding-left: 1rem;
-
-    li {
-      margin: 1.6rem 1.8rem;
-      font-weight: 600;
-      color: #344563;
-    }
-  }
 }
 
-#footer-icons,
-#background-icons > svg:nth-child(7) {
-  display: none;
+header nav > ul {
+  transition: margin-left 1s;
+  margin-left: 110vw;
+  margin-top: 0;
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  font-size: 2.8rem;
+  font-weight: 600;
+  text-align: left;
+  z-index: 100;
+  padding-top: 5rem;
+  padding-left: 1rem;
+}
+
+header nav > ul li {
+  margin: 1.6rem 1.8rem;
+  font-weight: 600;
+  color: #344563;
 }
 
 .svgClose {
@@ -227,18 +129,18 @@ header {
   position: static;
   margin-right: 0.8rem;
   margin-top: 0.8rem;
-  color: $svgGray;
+  color: #67798e;
   cursor: pointer;
+}
 
-  &:hover {
-    background-color: $svgGrayHover;
-    border-radius: 4px;
-  }
+.svgClose:hover {
+  background-color: #e5e2e2c2;
+  border-radius: 4px;
+}
 
-  &:active {
-    background-color: $svgGrayActive !important;
-    border-radius: 4px;
-  }
+.svgClose:active {
+  background-color: #c3c0c0c7 !important;
+  border-radius: 4px;
 }
 
 section div img {
@@ -253,16 +155,16 @@ section div img {
   height: 100%;
   cursor: pointer;
   padding: 0.5rem;
+}
 
-  &:hover {
-    background-color: #e5e2e2c2;
-    border-radius: 4px;
-  }
+#burger-container:hover {
+  background-color: #e5e2e2c2;
+  border-radius: 4px;
+}
 
-  &:hover:active {
-    background-color: $svgGrayActive;
-    border-radius: 4px;
-  }
+#burger-container:hover:active {
+  background-color: #c3c0c0c7;
+  border-radius: 4px;
 }
 
 #landing {
@@ -352,6 +254,11 @@ h1 span:last-child {
   background-color: #ebf0ee !important;
 }
 
+.about-me-card svg {
+  height: 10rem;
+  width: 100%;
+}
+
 .card .about-me-tag {
   background-color: white;
   color: var(--green);
@@ -399,12 +306,17 @@ h1 span:last-child {
   z-index: -1;
 }
 
-#about-me > svg:nth-child(4) {
+#about-me .about-me-svg {
+  position: absolute;
+  transition: height 1.5s linear 0.5s, transform 0.4s linear;
+}
+
+#about-me .about-me-svg:nth-child(4) {
   top: -4rem;
   right: calc(-1 * var(--section-x-padding));
 }
 
-#about-me > svg:nth-child(5) {
+#about-me .about-me-svg:nth-child(5) {
   bottom: -0.8rem;
   left: calc(-1 * var(--section-x-padding));
 }
@@ -420,83 +332,77 @@ h1 span:last-child {
   background: #c1c7d0de;
   text-align: center;
   justify-content: center;
+}
 
-  #content {
-    position: relative;
-    text-align: left;
-    width: 100%;
-    height: max-content;
-    max-height: 80vh;
-    background-color: white;
-    border-radius: 8px;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    overflow-y: scroll;
-    margin-bottom: 0;
-  }
+#popUp #content {
+  position: relative;
+  text-align: left;
+  width: 100%;
+  height: max-content;
+  max-height: 80vh;
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  margin-bottom: 0;
+}
 
-  .svgClose {
-    position: absolute;
-    right: 2rem;
-    top: 2rem;
-    align-self: end;
-    width: 24px;
-    color: white;
+#popUp .svgClose {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  align-self: end;
+  width: 24px;
+  color: white;
+}
 
-    &:hover {
-      background-color: $svgWhiteHover;
-    }
+#popUp .svgClose:hover {
+  background-color: rgba(32, 31, 31, 0.75);
+}
 
-    &:hover:active {
-      background-color: black !important;
-    }
-  }
+#popUp .svgClose:hover:active {
+  background-color: black !important;
+}
 
-  #popUpTitle {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#popUp #popUpTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    span {
-      display: none;
-    }
-  }
+#popUp #popUpTitle span {
+  display: none;
+}
 
-  h2 {
-    @extend %portfolio-h2;
-  }
+#popUp ul {
+  justify-content: start;
+  margin-left: -0.3rem;
+}
 
-  ul {
-    justify-content: start;
-    margin-left: -0.3rem;
-  }
+#popUp .btn-green {
+  font-size: 0.9rem !important;
+  padding: 0.5rem 0.7rem !important;
+  display: inline-flex;
+  justify-content: space-evenly;
+  flex: 1;
+  align-items: center;
+}
 
-  .btn-green {
-    font-size: 0.9rem !important;
-    padding: 0.5rem 0.7rem !important;
-    display: inline-flex;
-    justify-content: space-evenly;
-    flex: 1;
-    align-items: center;
-  }
+#popUp p {
+  color: #344563;
+  font-size: 1rem;
+}
 
-  p {
-    color: $text-color;
-    font-size: 1rem;
-  }
+#popUp a img {
+  height: 18px;
+  width: 18px;
+  margin-left: 0.5rem;
+}
 
-  a {
-    img {
-      height: 18px;
-      width: 18px;
-      margin-left: 0.5rem;
-    }
-  }
-
-  .btn-group {
-    display: flex;
-  }
+#popUp .btn-group {
+  display: flex;
 }
 
 #contact-title {
@@ -506,69 +412,100 @@ h1 span:last-child {
   margin-bottom: 4rem;
 }
 
-#contact-me {
-  form {
-    display: flex;
-    flex-direction: column;
-    z-index: 1;
-
-    * {
-      padding: 1rem;
-      border-radius: 4px;
-      margin-bottom: 1.5rem;
-      border: 1px solid #d0d9d4;
-      color: #6b778c;
-      font-size: 0.94rem;
-      font-family: "Inter", sans-serif;
-
-      &:focus-visible {
-        outline-color: #60c095;
-        color: black;
-      }
-    }
-
-    .alert {
-      * {
-        padding: 0;
-        margin: 0;
-        border: 0;
-      }
-
-      img {
-        width: 24px;
-      }
-    }
-  }
+#contact-me form {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
 }
 
-#footer-icons {
+#contact-me form * {
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #d0d9d4;
+  color: #6b778c;
+  font-size: 0.94rem;
+  font-family: "Inter", sans-serif;
+}
+
+#contact-me form *:focus-visible {
+  outline-color: #60c095;
+  color: black;
+}
+
+#contact-me form .alert * {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+#contact-me form .alert img {
+  width: 24px;
+}
+
+#background-icons {
   position: relative;
+  overflow-x: clip;
 }
 
-#footer-icons > svg:nth-child(1) {
+#background-icons .background-images {
   position: absolute;
-  left: 0;
-  bottom: -12rem;
 }
 
-#footer-icons > svg:nth-child(2) {
-  position: absolute;
-  bottom: -5rem;
-  left: 15rem;
-}
-
-#footer-icons > svg:nth-child(3) {
-  position: absolute;
+#background-icons .background-images:nth-child(1) {
   right: 0;
-  bottom: -10rem;
+  top: calc(3.5rem - var(--navbar-margin));
 }
 
-#background-icons > svg:nth-child(2n):hover {
+#background-icons .background-images:nth-child(3) {
+  left: 0;
+  top: calc(32rem - var(--navbar-margin));
+}
+
+#background-icons .background-images:nth-child(2) {
+  right: -75px;
+  top: calc(15rem - var(--navbar-margin));
+  width: 100px;
+}
+
+#background-icons .background-images:nth-child(4) {
+  left: 1rem;
+  top: calc(20rem - var(--navbar-margin));
+}
+
+#background-icons .background-images:nth-child(5) {
+  left: 12rem;
+  top: calc(31.2rem - var(--navbar-margin));
+}
+
+#background-icons .background-images:nth-child(6) {
+  right: 0;
+  top: calc(37rem - var(--navbar-margin));
+}
+
+#background-icons .background-images:nth-child(7) {
+  width: 15rem;
+  left: 0;
+  top: calc(7rem - var(--navbar-margin));
+  display: none;
+}
+
+#background-icons .background-images:nth-child(8) {
+  left: -20%;
+  top: calc(-1 * var(--navbar-margin));
+  bottom: 0;
+  width: 140%;
+  height: 100vh;
+  z-index: -1;
+  animation: lines 4s ease-in-out 1;
+}
+
+#background-icons .background-images:nth-child(2n):hover {
   cursor: pointer;
   transform: rotate(360deg) scale(0.1);
 }
 
-#background-icons > svg:nth-child(2n + 1):hover {
+#background-icons .background-images:nth-child(2n+1):hover {
   cursor: pointer;
   height: 300vh;
 
@@ -576,11 +513,54 @@ h1 span:last-child {
   transform: rotate(180deg) scale(1.5);
 }
 
-/* @media screen and (min-width: 800px) {
-nav > ul {
-transition: all 0s !important;
+@keyframes lines {
+  0% {
+    opacity: 0;
+  }
+
+  49% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+
+    /* display: block; */
+    transform: scale(1.5);
+  }
+
+  75% {
+    /* display: block; */
+    transform: scale(0.7);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
-} */
+
+#footer-icons {
+  position: relative;
+  display: none;
+}
+
+#footer-icons svg:nth-child(1) {
+  position: absolute;
+  left: 0;
+  bottom: -12rem;
+}
+
+#footer-icons svg:nth-child(2) {
+  position: absolute;
+  bottom: -5rem;
+  left: 15rem;
+}
+
+#footer-icons svg:nth-child(3) {
+  position: absolute;
+  right: 0;
+  bottom: -10rem;
+}
 
 @media screen and (min-width: 890px) {
   :root {
@@ -601,11 +581,11 @@ transition: all 0s !important;
     height: min-content !important;
     font-size: inherit !important;
     padding-top: 0 !important;
+  }
 
-    li {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
+  nav > ul li {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   header > h1,
@@ -659,34 +639,30 @@ transition: all 0s !important;
     display: block;
   }
 
-  #popUp {
-    .svgClose {
-      flex: none;
-      display: block;
-      position: static;
-      width: 24px !important;
-      color: $svgGray;
-      background-color: $svgGrayHover;
-      border-radius: 4px;
-      margin: 0;
+  #popUp .svgClose {
+    flex: none;
+    display: block;
+    position: static;
+    width: 24px !important;
+    color: #67798e;
+    background-color: #e5e2e2c2;
+    border-radius: 4px;
+    margin: 0;
+  }
 
-      &:hover {
-        background-color: $svgGrayActive !important;
-      }
+  #popUp .svgClose:hover {
+    background-color: #c3c0c0c7 !important;
+  }
 
-      &:hover:active {
-        background-color: $svgGrayActive !important;
-      }
-    }
+  #popUp .svgClose:hover:active {
+    background-color: #c3c0c0c7 !important;
+  }
 
-    #content {
-      width: 80%;
-    }
+  #popUp #content {
+    width: 80%;
+  }
 
-    #popUpTitle {
-      span {
-        display: block !important;
-      }
-    }
+  #popUp #popUpTitle span {
+    display: block !important;
   }
 }
