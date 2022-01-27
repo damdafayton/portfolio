@@ -1,4 +1,5 @@
-#popUp h2, .card > h2 {
+.card > h2,
+#popUp h2 {
   font-size: 1.5rem;
   margin: 1rem;
   overflow: hidden;
@@ -35,10 +36,12 @@ body {
   text-align: center;
   overflow-x: hidden;
 }
+
 body section {
   padding: 0 var(--section-x-padding);
   padding-top: 4rem;
 }
+
 body section:nth-of-type(1) {
   padding-top: 0;
 }
@@ -145,22 +148,28 @@ section h1 {
   0% {
     opacity: 0;
   }
+
   49% {
     opacity: 0;
   }
+
   50% {
     opacity: 1;
+
     /* display: block; */
     transform: scale(1.5);
   }
+
   75% {
     /* display: block; */
     transform: scale(0.7);
   }
+
   100% {
     transform: scale(1);
   }
 }
+
 header {
   z-index: 1;
   box-sizing: border-box;
@@ -174,6 +183,7 @@ header {
   width: 100%;
   font-size: 0.8rem;
 }
+
 header nav > ul {
   transition: margin-left 1s;
   margin-left: 110vw;
@@ -191,6 +201,7 @@ header nav > ul {
   padding-top: 5rem;
   padding-left: 1rem;
 }
+
 header nav > ul li {
   margin: 1.6rem 1.8rem;
   font-weight: 600;
@@ -210,10 +221,12 @@ header nav > ul li {
   color: #67798e;
   cursor: pointer;
 }
+
 .svgClose:hover {
   background-color: #e5e2e2c2;
   border-radius: 4px;
 }
+
 .svgClose:active {
   background-color: #c3c0c0c7 !important;
   border-radius: 4px;
@@ -232,10 +245,12 @@ section div img {
   cursor: pointer;
   padding: 0.5rem;
 }
+
 #burger-container:hover {
   background-color: #e5e2e2c2;
   border-radius: 4px;
 }
+
 #burger-container:hover:active {
   background-color: #c3c0c0c7;
   border-radius: 4px;
@@ -269,10 +284,12 @@ section li img {
   0% {
     transform: scale(0.1);
   }
+
   100% {
     transform: scale(1);
   }
 }
+
 h1 span {
   font-size: 2.5rem;
   text-align: center;
@@ -395,6 +412,7 @@ h1 span:last-child {
   text-align: center;
   justify-content: center;
 }
+
 #popUp #content {
   position: relative;
   text-align: left;
@@ -409,6 +427,7 @@ h1 span:last-child {
   overflow-y: scroll;
   margin-bottom: 0;
 }
+
 #popUp .svgClose {
   position: absolute;
   right: 2rem;
@@ -417,24 +436,30 @@ h1 span:last-child {
   width: 24px;
   color: white;
 }
+
 #popUp .svgClose:hover {
   background-color: rgba(32, 31, 31, 0.75);
 }
+
 #popUp .svgClose:hover:active {
   background-color: black !important;
 }
+
 #popUp #popUpTitle {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 #popUp #popUpTitle span {
   display: none;
 }
+
 #popUp ul {
   justify-content: start;
   margin-left: -0.3rem;
 }
+
 #popUp .btn-green {
   font-size: 0.9rem !important;
   padding: 0.5rem 0.7rem !important;
@@ -443,15 +468,18 @@ h1 span:last-child {
   flex: 1;
   align-items: center;
 }
+
 #popUp p {
   color: #344563;
   font-size: 1rem;
 }
+
 #popUp a img {
   height: 18px;
   width: 18px;
   margin-left: 0.5rem;
 }
+
 #popUp .btn-group {
   display: flex;
 }
@@ -468,6 +496,7 @@ h1 span:last-child {
   flex-direction: column;
   z-index: 1;
 }
+
 #contact-me form * {
   padding: 1rem;
   border-radius: 4px;
@@ -477,15 +506,18 @@ h1 span:last-child {
   font-size: 0.94rem;
   font-family: "Inter", sans-serif;
 }
+
 #contact-me form *:focus-visible {
   outline-color: #60c095;
   color: black;
 }
+
 #contact-me form .alert * {
   padding: 0;
   margin: 0;
   border: 0;
 }
+
 #contact-me form .alert img {
   width: 24px;
 }
@@ -520,13 +552,14 @@ h1 span:last-child {
 #background-icons > svg:nth-child(2n+1):hover {
   cursor: pointer;
   height: 300vh;
+
   /* margin-top: 100vh; */
   transform: rotate(180deg) scale(1.5);
 }
 
 /* @media screen and (min-width: 800px) {
 nav > ul {
-  transition: all 0s !important;
+transition: all 0s !important;
 }
 } */
 @media screen and (min-width: 890px) {
@@ -549,15 +582,16 @@ nav > ul {
     font-size: inherit !important;
     padding-top: 0 !important;
   }
+
   nav > ul li {
     margin-top: 0;
     margin-bottom: 0;
   }
 
   header > h1,
-#burger-container,
-#content > .btn-group,
-nav li:nth-child(1) {
+  #burger-container,
+  #content > .btn-group,
+  nav li:nth-child(1) {
     display: none !important;
   }
 
@@ -601,7 +635,7 @@ nav li:nth-child(1) {
   }
 
   #footer-icons,
-#background-icons > svg:nth-child(7) {
+  #background-icons > svg:nth-child(7) {
     display: block;
   }
 
@@ -615,18 +649,20 @@ nav li:nth-child(1) {
     border-radius: 4px;
     margin: 0;
   }
+
   #popUp .svgClose:hover {
     background-color: #c3c0c0c7 !important;
   }
+
   #popUp .svgClose:hover:active {
     background-color: #c3c0c0c7 !important;
   }
+
   #popUp #content {
     width: 80%;
   }
+
   #popUp #popUpTitle span {
     display: block !important;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
