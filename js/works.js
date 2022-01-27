@@ -57,7 +57,7 @@ Object.keys(portfolioObj).forEach(() => {
   cardContainer.innerHTML += (`
     <div class= "card">
     <img alt="screenhost of my work" src="#">
-      <h1></h1>
+      <h2></h2>
       <ul class="tech"></ul>
       <a class="btn-green" href="#">See Project</a>
     </div>
