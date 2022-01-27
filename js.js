@@ -76,9 +76,9 @@ navLinks.forEach((link) => link.addEventListener('click', () => {
 }));
 
 // FILL PROJECT DIVS
-const cardContainer = document.querySelector('#my-works > .card-container')
+const cardContainer = document.querySelector('#my-works > .card-container');
 // Create card section based on the amount of projects
-for (let project of Object.keys(portfolioObj)) {
+Object.keys(portfolioObj).forEach(() => {
   cardContainer.innerHTML += (`
     <div class= "card">
     <img alt="screenhost of my work" src="#">
@@ -86,9 +86,8 @@ for (let project of Object.keys(portfolioObj)) {
       <ul class="tech"></ul>
       <a class="btn-green" href="#">See Project</a>
     </div>
-  `)
-}
-
+  `);
+});
 
 // POPUP SECTION
 const popUp = document.querySelector('#popUp');
@@ -109,7 +108,6 @@ function ulFiller(ul, portfolioOrder) {
     ul.appendChild(listElement);
   });
 }
-
 
 // Portfolio pop-up handler
 const myWorks = document.querySelectorAll('#my-works>.card-container>.card');
