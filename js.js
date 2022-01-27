@@ -95,6 +95,23 @@ const popUp = document.querySelector('#popUp');
 const popUpClose = document.querySelector('#popUp .svgClose');
 const body = document.querySelector('body');
 
+// Pop-up close button
+popUpClose.addEventListener('click', (e) => {
+  popUp.classList.remove('show');
+  body.classList.remove('body-blur');
+  // Clean the list
+  const uList = e.target.parentElement.querySelector('UL');
+  uList.innerHTML = '';
+});
+
+function ulFiller(ul, portfolioOrder) {
+  portfolioObj[portfolioOrder].tech.forEach((newTech) => {
+    // console.log('add newTech: ', newTech)
+    const listElement = techListElementCreator(newTech);
+    ul.appendChild(listElement);
+  });
+}
+
 // Portfolio pop-up handler
 const myWorks = document.querySelectorAll('#my-works>.card-container>.card');
 function portfolioPopUp(e) {
