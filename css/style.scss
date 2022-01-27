@@ -90,11 +90,6 @@ section h1 {
   @extend %portfolio-h2;
 }
 
-.about-me-card > svg {
-  height: 10rem;
-  width: 100%;
-}
-
 #background-icons {
   position: relative;
   overflow-x: clip;
@@ -350,6 +345,15 @@ h1 span:last-child {
 
 .about-me-card {
   background-color: #ebf0ee !important;
+
+  svg {
+    height: 10rem;
+    width: 100%;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
 }
 
 .card .about-me-tag {
