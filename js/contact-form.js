@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 Array.from(contactForm.elements).forEach((element) => {
-  if (element.tagName === 'INPUT' || element.tagName === 'textarea') {
+  if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
     element.addEventListener('input', saveToLocalStorage);
   }
 });
