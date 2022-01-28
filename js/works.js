@@ -142,14 +142,22 @@ myWorks.forEach((work, i) => {
   });
 });
 
-// PORTFOLIO DETAILS POPUP CLOSE BUTTON
+// PORTFOLIO DETAILS POPUP CLOSE LOGIC
 const popUpClose = document.querySelector('#popUp .svgClose');
 const body = document.querySelector('body');
+const uList = popUpClose.parentElement.querySelector('UL');
 
-popUpClose.addEventListener('click', (e) => {
-  const uList = e.currentTarget.parentElement.querySelector('UL');
+function closePopup() {
   popUp.classList.remove('show');
   body.classList.remove('body-blur');
   // Clean the list
   uList.innerHTML = '';
+}
+
+popUpClose.addEventListener('click', closePopup);
+window.addEventListener('click', (e) => {
+  console.log('hello', e.target)
+  if (e.target == popUpClose.parentElement.parentElement) {
+    closePopup()
+  }
 });
