@@ -54,6 +54,7 @@ h1 {
 
 ul {
   padding: 0 !important;
+  margin-bottom: 0;
 }
 
 div > p {
