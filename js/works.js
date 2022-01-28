@@ -1,12 +1,12 @@
 // Portfolio data
 const portfolioObj = {
   1: {
-    name: 'Uber',
-    description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum iure assumenda natus officiis, suscipit rerum repudiandae optio magni a aliquid eveniet ea commodi sed mollitia accusamus incidunt similique unde expedita.',
-    screenshotUrl: './works/work1.jpg',
-    tech: ['Ruby on rails', 'HTML', 'JavaScript', 'CSS'],
-    linkToLive: 'http://www.uber.com',
-    linkToSource: 'http://www.github.com/uber',
+    name: 'Dating',
+    description: 'Dummy dating website\n email: dummy@dummy.com\n password: damdafayton',
+    screenshotUrl: './works/screenshot-dating.jpg',
+    tech: ['HTML', 'JS', 'CSS', 'MongoDB', 'Node.js'],
+    linkToLive: 'http://dating-clone.herokuapp.com/',
+    // linkToSource: 'http://www.github.com/uber',
   },
   2: {
     name: 'Facebook',
@@ -92,9 +92,29 @@ function portfolioPopUp(e) {
   });
   n += 1; // to adjust for object order
 
+  // Create link elements
+  imgLive = document.createElement('img')
+  imgLive.src="./icons/see-live.svg"
+  imgSource = document.createElement('img')
+  imgSource.src="icons/source.svg"
+
+  aLive = document.createElement('a')
+  aLive.classList.add('btn-green', 'me-1')
+  aLive.target="_blank"
+  aLive.href = portfolioObj[n].linkToLive
+  aLive.innerText='See Live'
+  aLive.appendChild(imgLive)
+
+  aSource = document.createElement('a')
+  aSource.classList.add('btn-green', 'ms-1')
+  aSource.target="_blank"
+  aSource.href = portfolioObj[n].linkToSource
+  aSource.innerText='See Source'
+  aSource.appendChild(imgSource)
+
   const popUpElements = popUp.querySelectorAll('*');
   popUpElements.forEach((element) => {
-    switch (element.id) {
+    switch (element.id || element.tagName) {
       case 'popUpImage':
         element.src = portfolioObj[n].screenshotUrl;
         break;
@@ -104,10 +124,14 @@ function portfolioPopUp(e) {
       case 'popUpTech':
         ulFiller(element, n);
         break;
-      case 'popUpTitle':
-        element.firstElementChild.innerText = portfolioObj[n].name;
-        element.lastElementChild.firstElementChild.href = portfolioObj[n].linkToLive;
-        element.lastElementChild.lastElementChild.href = portfolioObj[n].linkToSource;
+      case 'SPAN':
+        element.innerHTML='' // reset whatever element was put in during previous fill
+        if (portfolioObj[n].linkToLive){
+          element.appendChild(aLive.cloneNode(true))
+        }
+        if (portfolioObj[n].linkToSource){
+          element.appendChild(aSource.cloneNode(true))
+        }
         break;
       default:
         break;
@@ -156,7 +180,7 @@ function closePopup() {
 
 popUpClose.addEventListener('click', closePopup);
 window.addEventListener('click', (e) => {
-  console.log('hello', e.target)
+  // console.log('hello', e.target)
   if (e.target == popUpClose.parentElement.parentElement) {
     closePopup()
   }
