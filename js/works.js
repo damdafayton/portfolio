@@ -9,12 +9,12 @@ const portfolioObj = {
     // linkToSource: 'http://www.github.com/uber',
   },
   2: {
-    name: 'Facebook',
-    description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum iure assumenda natus officiis, suscipit rerum repudiandae optio magni a aliquid eveniet ea commodi sed mollitia accusamus incidunt similique unde expedita.',
-    screenshotUrl: './works/work2.jpg',
-    tech: ['Ruby on rails', 'HTML', 'JavaScript', 'CSS'],
-    linkToLive: 'http://www.facebook.com',
-    linkToSource: 'http://www.github.com/facebook',
+    name: 'Yelp-Camp',
+    description: 'Dummy camping website\n username: dummy\n password: damdafayton',
+    screenshotUrl: './works/ss-camping.jpg',
+    tech: ['HTML', 'JS', 'CSS', 'MongoDB', 'Node.js'],
+    linkToLive: 'http://fake-camping.herokuapp.com/',
+    linkToSource: 'https://github.com/damdafayton/dummy-camping',
   },
   3: {
     name: 'New Uber',
