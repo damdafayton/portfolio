@@ -135,6 +135,7 @@ header nav > ul li {
 section div img {
   width: 100%;
   border-radius: 8px;
+  border: 1px solid #dfd9d9;
 }
 
 #burger-container {
