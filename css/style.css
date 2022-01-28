@@ -76,7 +76,7 @@ div > p {
 
 section h1 {
   margin: 0;
-  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 header {
@@ -91,6 +91,9 @@ header {
   top: 0;
   width: 100%;
   font-size: 0.8rem;
+}
+header h1 {
+  font-size: 1.1rem;
 }
 header nav > ul {
   transition: margin-left 1s;
@@ -161,11 +164,15 @@ section div img {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  font-size: 1.2rem;
 }
-
-#landing-p {
+#landing #landing-p {
+  font-size: 1rem;
+  padding: 0.6rem 0.8rem;
   margin: 0;
+}
+#landing h1 {
+  font-size: 2rem;
+  margin-bottom: 0;
 }
 
 section li img {
@@ -551,6 +558,10 @@ nav li:nth-child(1) {
 
   #landing {
     padding: 0 8rem;
+    font-size: 1.2rem;
+  }
+  #landing h1 {
+    font-size: 2.5rem;
   }
 
   #background-icons .background-images:nth-child(1) {
