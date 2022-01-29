@@ -178,11 +178,11 @@ section li img {
   margin: 0 1rem;
 }
 
-#landing > h2,
-#landing-p {
+.landing {
   animation: im-developer 2s ease-out;
   z-index: 1;
   padding: 1rem;
+  margin-top: 2rem;
 }
 
 @keyframes im-developer {
