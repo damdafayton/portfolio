@@ -1,4 +1,4 @@
-![](portfolio-scr.jpg)
+![](./works/ss-portfolio-m.jpg)
 
 ![](./works/ss-portfolio.jpg)
 
