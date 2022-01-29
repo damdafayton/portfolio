@@ -12,7 +12,7 @@ This project has my web development works.
 
 ## Built With
 
-- HTML, CSS
+- HTML, CSS. JS, SCSS
 
 
 ## Live Demo
