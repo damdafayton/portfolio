@@ -174,7 +174,7 @@ section div img {
 }
 
 section li img {
-  width: 2rem;
+  width: 3rem;
   margin: 0 1rem;
 }
 
@@ -182,6 +182,7 @@ section li img {
 #landing-p {
   animation: im-developer 2s ease-out;
   z-index: 1;
+  padding: 1rem;
 }
 
 @keyframes im-developer {
