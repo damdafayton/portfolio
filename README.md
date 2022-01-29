@@ -1,5 +1,7 @@
 ![](portfolio-scr.jpg)
 
+![](./works/ss-portfolio.jpg)
+
 
 # Personal portfolio page
 
@@ -15,16 +17,16 @@ This project has my web development works.
 
 ## Live Demo
 
-[Live Demo Link](https://backtofayton.github.io/portfolio/)
+[Live Demo Link](https://damdafayton.github.io/portfolio/)
 
 
 ## Authors
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/backtofayton)
-- Twitter: [@twitterhandle](https://twitter.com/topragagiden)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/damdafayton)
+- GitHub: [@damdafayton](https://github.com/damdafayton)
+- Twitter: [@damdafayton](https://twitter.com/topragagiden)
+- LinkedIn: [/in/damdafayton](https://linkedin.com/in/damdafayton)
 
 
 ## 🤝 Contributing
