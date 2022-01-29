@@ -1,8 +1,9 @@
-#popUp h2, .card > h2 {
+#popUp h3, .card > h3 {
   font-size: 1.5rem;
   margin: 1rem;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-weight: 600;
 }
 
 :root {
@@ -47,9 +48,11 @@ li {
   list-style-type: none;
 }
 
-h1 {
+h2 {
+  font-size: 1.8rem;
   margin: 0;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 ul {
@@ -72,11 +75,6 @@ div > p {
 
 .body-blur {
   filter: blur(4px);
-}
-
-section h1 {
-  margin: 0;
-  margin-bottom: 1rem;
 }
 
 header {
@@ -165,14 +163,14 @@ section div img {
   justify-content: space-evenly;
   align-items: center;
 }
+#landing span:last-child {
+  color: var(--green);
+  display: block;
+}
 #landing #landing-p {
   font-size: 1rem;
   padding: 0.6rem 0.8rem;
   margin: 0;
-}
-#landing h1 {
-  font-size: 2rem;
-  margin-bottom: 0;
 }
 
 section li img {
@@ -180,7 +178,7 @@ section li img {
   margin: 0 1rem;
 }
 
-#landing > h1,
+#landing > h2,
 #landing-p {
   animation: im-developer 2s ease-out;
   z-index: 1;
@@ -194,17 +192,6 @@ section li img {
     transform: scale(1);
   }
 }
-h1 span {
-  font-size: 2.5rem;
-  text-align: center;
-  display: block;
-  font-weight: 700;
-}
-
-h1 span:last-child {
-  color: var(--green);
-}
-
 #contact-box {
   display: flex;
   justify-content: center;
@@ -252,7 +239,7 @@ h1 span:last-child {
   height: 10rem;
   width: 100%;
 }
-.about-me-card h2 {
+.about-me-card h3 {
   margin-top: 0;
 }
 
@@ -374,7 +361,7 @@ h1 span:last-child {
   font-size: 0.9rem !important;
   padding: 0.5rem 0.7rem !important;
   display: inline-flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex: 1;
   align-items: center;
 }
@@ -394,7 +381,7 @@ h1 span:last-child {
 #contact-title {
   color: #172b4d;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin-bottom: 4rem;
 }
 
@@ -549,8 +536,9 @@ h1 span:last-child {
     margin-bottom: 0;
   }
 
-  header > h1,
+  header h1,
 #burger-container,
+#my-works h2 + svg,
 #content > .btn-group,
 nav li:nth-child(1) {
     display: none !important;
@@ -560,8 +548,13 @@ nav li:nth-child(1) {
     padding: 0 8rem;
     font-size: 1.2rem;
   }
-  #landing h1 {
-    font-size: 2.5rem;
+  #landing h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  #landing h2 span {
+    display: block;
   }
 
   #background-icons .background-images:nth-child(1) {

@@ -57,7 +57,7 @@ Object.keys(portfolioObj).forEach(() => {
   cardContainer.innerHTML += (`
     <div class= "card">
     <img alt="screenhost of my work" src="#">
-      <h2></h2>
+      <h3></h3>
       <ul class="tech"></ul>
       <a class="btn-green" href="#">See Project</a>
     </div>
@@ -94,22 +94,22 @@ function portfolioPopUp(e) {
 
   // Create link elements
   imgLive = document.createElement('img')
-  imgLive.src="./icons/see-live.svg"
+  imgLive.src = "./icons/see-live.svg"
   imgSource = document.createElement('img')
-  imgSource.src="icons/source.svg"
+  imgSource.src = "icons/source.svg"
 
   aLive = document.createElement('a')
   aLive.classList.add('btn-green', 'me-1')
-  aLive.target="_blank"
+  aLive.target = "_blank"
   aLive.href = portfolioObj[n].linkToLive
-  aLive.innerText='See Live'
+  aLive.innerText = 'See Live'
   aLive.appendChild(imgLive)
 
   aSource = document.createElement('a')
   aSource.classList.add('btn-green', 'ms-1')
-  aSource.target="_blank"
+  aSource.target = "_blank"
   aSource.href = portfolioObj[n].linkToSource
-  aSource.innerText='See Source'
+  aSource.innerText = 'See Source'
   aSource.appendChild(imgSource)
 
   const popUpElements = popUp.querySelectorAll('*');
@@ -125,11 +125,11 @@ function portfolioPopUp(e) {
         ulFiller(element, n);
         break;
       case 'SPAN':
-        element.innerHTML='' // reset whatever element was put in during previous fill
-        if (portfolioObj[n].linkToLive){
+        element.innerHTML = '' // reset whatever element was put in during previous fill
+        if (portfolioObj[n].linkToLive) {
           element.appendChild(aLive.cloneNode(true))
         }
-        if (portfolioObj[n].linkToSource){
+        if (portfolioObj[n].linkToSource) {
           element.appendChild(aSource.cloneNode(true))
         }
         break;
@@ -150,7 +150,7 @@ myWorks.forEach((work, i) => {
       case 'IMG':
         element.src = portfolioObj[i].screenshotUrl;
         return 0;
-      case 'H2':
+      case 'H3':
         element.innerText = portfolioObj[i].name;
         return 0;
       case 'UL':
