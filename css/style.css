@@ -71,10 +71,15 @@ div > p {
 
 .slide-left {
   margin-left: 0;
+  transition: margin-left 1s;
 }
 
 .body-blur {
   filter: blur(4px);
+}
+
+.card > h3 {
+  overflow: visible;
 }
 
 header {
@@ -94,7 +99,6 @@ header h1 {
   font-size: 1.1rem;
 }
 header nav > ul {
-  transition: margin-left 1s;
   margin-left: 110vw;
   margin-top: 0;
   position: absolute;
@@ -212,7 +216,10 @@ section li img {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  justify-content: space-between;
+  justify-content: start;
+}
+.card span {
+  height: 100%;
 }
 
 .tech {

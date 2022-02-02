@@ -80,6 +80,7 @@ div > p {
 
 .slide-left {
   margin-left: 0;
+  transition: margin-left 1s;
 }
 
 .body-blur {
@@ -88,6 +89,7 @@ div > p {
 
 .card > h3 {
   @extend %portfolio-h3;
+  overflow: visible;
 }
 
 header {
@@ -108,7 +110,6 @@ header {
   }
 
   nav > ul {
-    transition: margin-left 1s;
     margin-left: 110vw;
     margin-top: 0;
     position: absolute;
@@ -236,7 +237,10 @@ section li img {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  justify-content: space-between;
+  justify-content: start;
+  span {
+    height: 100%;
+  }
 }
 
 .tech {

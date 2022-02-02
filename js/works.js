@@ -4,7 +4,7 @@ const portfolioObj = {
     name: 'Dating',
     description: 'Dummy dating website\n email: dummy@dummy.com\n password: damdafayton',
     screenshotUrl: './works/screenshot-dating.jpg',
-    tech: ['HTML', 'JS', 'CSS', 'MongoDB', 'Node.js'],
+    tech: ['HTML', 'CSS', 'JS', 'MongoDB', 'Bootstrap.css', 'Node.js'],
     linkToLive: 'http://dating-clone.herokuapp.com/',
     // linkToSource: 'http://www.github.com/uber',
   },
@@ -12,7 +12,7 @@ const portfolioObj = {
     name: 'Yelp-Camp',
     description: 'Dummy camping website\n username: dummy\n password: damdafayton',
     screenshotUrl: './works/ss-camping.jpg',
-    tech: ['HTML', 'JS', 'CSS', 'MongoDB', 'Node.js'],
+    tech: ['HTML', 'CSS', 'JS', 'MongoDB', 'Bootstrap.css', 'Node.js'],
     linkToLive: 'http://fake-camping.herokuapp.com/',
     linkToSource: 'https://github.com/damdafayton/dummy-camping',
   },
@@ -20,7 +20,7 @@ const portfolioObj = {
     name: 'Best News Poster',
     description: 'Dummy news portal\n username: herokuguest\n password: herokuguest..',
     screenshotUrl: './works/ss-bestnews.jpg',
-    tech: ['HTML', 'JS', 'CSS', 'Python', 'Django', 'React.js', 'PostgreSQL', 'Docker'],
+    tech: ['HTML', 'CSS', 'JS', 'Python', 'PostgreSQL', 'Docker', 'Django.py', 'React.js'],
     linkToLive: 'https://bestnewsposter.herokuapp.com/',
     linkToSource: 'https://github.com/damdafayton/bestnewsposter',
   },
@@ -28,18 +28,18 @@ const portfolioObj = {
     name: 'Portfolio Page',
     description: 'This very page',
     screenshotUrl: './works/ss-portfolio.jpg',
-    tech: ['HTML', 'JS', 'CSS', 'SCSS'],
+    tech: ['HTML', 'CSS', 'JS', 'SCSS.css'],
     linkToLive: 'https://damdafayton.github.io/portfolio/',
     linkToSource: 'https://github.com/damdafayton/portfolio',
   },
-  // 5: {
-  //   name: 'Another Uber',
-  //   description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum iure assumenda natus officiis, suscipit rerum repudiandae optio magni a aliquid eveniet ea commodi sed mollitia accusamus incidunt similique unde expedita.',
-  //   screenshotUrl: './works/work1.jpg',
-  //   tech: ['Ruby on rails', 'HTML', 'JavaScript', 'CSS'],
-  //   linkToLive: 'http://www.uber.com',
-  //   linkToSource: 'http://www.github.com/uber',
-  // },
+  5: {
+    name: 'Restaurant',
+    description: 'Dummy restaurant web page',
+    screenshotUrl: './works/ss-restaurant.jpg',
+    tech: ['HTML', 'CSS', 'JS', 'Bootstrap.css', 'SCSS.css'],
+    linkToLive: 'https://damdafayton.github.io/restaurant/',
+    linkToSource: 'https://github.com/damdafayton/restaurant',
+  },
   // 6: {
   //   name: 'Another Facebook',
   //   description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum iure assumenda natus officiis, suscipit rerum repudiandae optio magni a aliquid eveniet ea commodi sed mollitia accusamus incidunt similique unde expedita.',
@@ -56,9 +56,10 @@ const cardContainer = document.querySelector('#my-works > .card-container');
 Object.keys(portfolioObj).forEach(() => {
   cardContainer.innerHTML += (`
     <div class= "card">
-    <img alt="screenhost of my work" src="#">
+      <img alt="screenhost of my work" src="#">
       <h3></h3>
       <ul class="tech"></ul>
+      <span></span>
       <a class="btn-green" href="#">See Project</a>
     </div>
   `);
