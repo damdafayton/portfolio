@@ -17,7 +17,7 @@ const portfolioObj = {
     linkToSource: 'https://github.com/damdafayton/dummy-camping',
   },
   3: {
-    name: 'Best News Poster',
+    name: 'News Poster',
     description: 'Dummy news portal\n username: herokuguest\n password: herokuguest..',
     screenshotUrl: './works/ss-bestnews.jpg',
     tech: ['HTML', 'CSS', 'JS', 'Python', 'PostgreSQL', 'Docker', 'Django.py', 'React.js'],

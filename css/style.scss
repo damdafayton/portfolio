@@ -35,6 +35,17 @@ a:hover {
   color: black;
 }
 
+.flex-basis-100 {
+  flex-basis: 100%;
+}
+
+#img-kata {
+  height: 1.62rem;
+  width: unset;
+  margin: 1.4rem 0;
+  border: none;
+}
+
 body {
   box-sizing: border-box;
   padding-top: var(--navbar-margin);
