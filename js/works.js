@@ -1,6 +1,14 @@
 // Portfolio data
 const portfolioObj = {
   1: {
+    name: 'Show My Neighbors',
+    description: 'A SPA built with React, Redux, showing neighboring countries of the visitor.',
+    screenshotUrl: './works/capstone_location_ss-wide.gif',
+    tech: ['HTML', 'CSS', 'JS', 'Bootstrap', 'SCSS', 'React', 'Redux'],
+    linkToLive: 'https://damdafayton-countries.herokuapp.com/',
+    linkToSource: 'https://github.com/damdafayton/capstone-location-api',
+  },
+  6: {
     name: 'Dating',
     description: 'Dummy dating website\n email: dummy@dummy.com\n password: damdafayton',
     screenshotUrl: './works/screenshot-dating.jpg',
@@ -39,15 +47,7 @@ const portfolioObj = {
     tech: ['HTML', 'CSS', 'JS', 'Bootstrap.css', 'SCSS.css'],
     linkToLive: 'https://damdafayton.github.io/restaurant/',
     linkToSource: 'https://github.com/damdafayton/restaurant',
-  },
-  // 6: {
-  //   name: 'Another Facebook',
-  //   description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum iure assumenda natus officiis, suscipit rerum repudiandae optio magni a aliquid eveniet ea commodi sed mollitia accusamus incidunt similique unde expedita.',
-  //   screenshotUrl: './works/work2.jpg',
-  //   tech: ['Ruby on rails', 'HTML', 'JavaScript', 'CSS'],
-  //   linkToLive: 'http://www.facebook.com',
-  //   linkToSource: 'http://www.github.com/facebook',
-  // },
+  }
 };
 
 // CREATE PORTFOLIO CARDS
