@@ -6,7 +6,7 @@ const portfolioObj = {
     screenshotUrl: './works/capstone_location_ss-wide.gif',
     tech: ['HTML', 'CSS', 'JS', 'Bootstrap', 'SCSS', 'React', 'Redux'],
     linkToLive: 'https://damdafayton-countries.herokuapp.com/',
-    linkToSource: 'https://github.com/damdafayton/capstone-location-api',
+    linkToSource: 'https://github.com/damdafayton/who-is-my-neighbor',
   },
   6: {
     name: 'Dating',
