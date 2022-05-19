@@ -134,8 +134,8 @@ header nav > ul li {
 .svgClose {
   /* fill: blue; */
   position: static;
-  margin-right: 0.8rem;
-  margin-top: 0.8rem;
+  /* margin-right: 0.8rem;
+  margin-top: 0.8rem; */
   color: #67798e;
   cursor: pointer;
 }
@@ -350,8 +350,8 @@ section li img {
 }
 #popUp .svgClose {
   position: absolute;
-  right: 2rem;
-  top: 2rem;
+  right: 1.7rem;
+  top: 2.2rem;
   align-self: end;
   width: 24px;
   color: white;
