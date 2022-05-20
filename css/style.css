@@ -310,6 +310,9 @@ section li img {
   padding-bottom: 3rem;
 }
 #about-me .about-me-svg {
+  border:0;
+  /* height: 110px; */
+  width: 68px;
   position: absolute;
   transition: height 1.5s linear 0.5s, transform 0.4s linear;
 }
@@ -438,16 +441,23 @@ section li img {
 }
 #background-icons .background-images {
   position: absolute;
-  transition: height 1.5s linear 0.5s, transform 0.4s linear;
+}
+#background-icons .background-images:nth-child(2n){
+  transition: transform 0.4s linear;
 }
 #background-icons .background-images:nth-child(2n):hover {
   cursor: pointer;
-  transform: rotate(360deg) scale(0.1);
+  transform: rotate(360deg) scale(0);
+}
+#background-icons .background-images:nth-child(2n+1){
+  transition: all 0.5s, transform 0.3s 0.6s;
 }
 #background-icons .background-images:nth-child(2n+1):hover {
+  transition: transform 0.3s linear, padding-bottom 1.5s linear 0.4s;
   cursor: pointer;
-  height: 300vh;
-  /* margin-top: 100vh; */
+  /* width: 50px; */
+  /* height: 300vh; */
+  padding-bottom: 100vh;
   transform: rotate(180deg) scale(1.5);
 }
 #background-icons .background-images:nth-child(1) {
@@ -515,19 +525,19 @@ section li img {
   position: relative;
   display: none;
 }
-#footer-icons svg:nth-child(1) {
+#footer-icons img:nth-child(1) {
   position: absolute;
   left: 0;
   bottom: -12rem;
 }
-#footer-icons svg:nth-child(2) {
+#footer-icons img:nth-child(2) {
   position: absolute;
   bottom: -5rem;
   left: 15rem;
 }
-#footer-icons svg:nth-child(3) {
+#footer-icons img:nth-child(3) {
   position: absolute;
-  right: 0;
+  right: -1rem;
   bottom: -10rem;
 }
 
