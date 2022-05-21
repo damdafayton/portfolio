@@ -82,7 +82,8 @@ div > p {
 
 .slide-left {
   margin-left: 0;
-  transition: margin-left 1s;
+  transition: margin-left 0.8s;
+  opacity:1;
 }
 
 .body-blur {
@@ -124,6 +125,8 @@ header nav > ul {
   z-index: 100;
   padding-top: 5rem;
   padding-left: 1rem;
+  opacity: 0;
+  transition: opacity 0.5s, margin-left 0s 0.5s;
 }
 header nav > ul li {
   margin: 1.6rem 1.8rem;
