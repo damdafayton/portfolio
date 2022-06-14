@@ -1,6 +1,14 @@
 // Portfolio data
 const portfolioList = [
   {
+    name: 'Blog App',
+    description: 'This Blog app is a classic example of a blog website. And the creation of a full functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.',
+    screenshotUrl: './works/ss-rails-blog.png',
+    tech: ['Ruby', 'Rails', 'Bootstrap', 'Sass', 'Postgresql', 'RSpec'],
+    linkToLive: 'https://damdafayton-blog.herokuapp.com/',
+    linkToSource: 'https://github.com/damdafayton/rails-blog',
+  },
+  {
     name: 'De-fi Token Farm',
     description: 'Yield farming dapp built by Brownie, Python and React where you can stake and un-stake various tokens.',
     screenshotUrl: './works/ss-defi-token-farm.png',
