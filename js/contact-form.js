@@ -13,17 +13,17 @@ function setAlert(alertMessage) {
 contactForm.addEventListener('submit', (e) => {
   if (email.value !== email.value.toLowerCase()) {
     e.preventDefault();
-    setAlert('Please use only lower case letters in your email address')
+    setAlert('Use only lower case letters in your email address.')
   }
   Array.from(contactForm.elements).forEach(element => {
     if (element.value.includes('test')) {
       e.preventDefault();
-      setAlert('Please don\'t spam me with test messages. ;)')
+      setAlert('Please don\'t spam me. ;)')
     }
   })
   if (contactForm.message.value.length < 10) {
     e.preventDefault();
-    setAlert('Is that all your message??')
+    setAlert('Com\'on you can spam better!')
   }
 });
 
