@@ -1,6 +1,14 @@
 // Portfolio data
-const portfolioObj = {
-  1: {
+const portfolioList = [
+  {
+    name: 'De-fi Token Farm',
+    description: 'Yield farming dapp built by Brownie, Python and React where you can stake and un-stake various tokens.',
+    screenshotUrl: './works/ss-defi-token-farm.png',
+    tech: ['JS', 'TypeScript', 'Bootstrap', 'React', 'Solidity', 'Python', 'Brownie'],
+    linkToLive: 'https://defi-token-farm.netlify.app/',
+    linkToSource: 'https://github.com/damdafayton/defi-token-farm',
+  },
+  {
     name: 'Show My Neighbors',
     description: 'A SPA built with React, Redux, showing neighboring countries of the visitor.',
     screenshotUrl: './works/capstone_location_ss-wide.gif',
@@ -8,7 +16,7 @@ const portfolioObj = {
     linkToLive: 'https://damdafayton-countries.herokuapp.com/',
     linkToSource: 'https://github.com/damdafayton/who-is-my-neighbor',
   },
-  6: {
+  {
     name: 'Dating',
     description: 'Dummy dating website\n email: dummy@dummy.com\n password: damdafayton',
     screenshotUrl: './works/screenshot-dating.jpg',
@@ -16,7 +24,7 @@ const portfolioObj = {
     linkToLive: 'http://dating-clone.herokuapp.com/',
     // linkToSource: 'http://www.github.com/uber',
   },
-  2: {
+  {
     name: 'Yelp-Camp',
     description: 'Dummy camping website\n username: dummy\n password: damdafayton',
     screenshotUrl: './works/ss-camping.jpg',
@@ -24,7 +32,7 @@ const portfolioObj = {
     linkToLive: 'http://fake-camping.herokuapp.com/',
     linkToSource: 'https://github.com/damdafayton/dummy-camping',
   },
-  3: {
+  {
     name: 'News Poster',
     description: 'Dummy news portal\n username: herokuguest\n password: herokuguest..',
     screenshotUrl: './works/ss-bestnews.jpg',
@@ -32,7 +40,7 @@ const portfolioObj = {
     linkToLive: 'https://bestnewsposter.herokuapp.com/',
     linkToSource: 'https://github.com/damdafayton/bestnewsposter',
   },
-  4: {
+  {
     name: 'Portfolio Page',
     description: 'This very page',
     screenshotUrl: './works/ss-portfolio.jpg',
@@ -40,7 +48,7 @@ const portfolioObj = {
     linkToLive: 'https://damdafayton.github.io/portfolio/',
     linkToSource: 'https://github.com/damdafayton/portfolio',
   },
-  5: {
+  {
     name: 'Restaurant',
     description: 'Dummy restaurant web page',
     screenshotUrl: './works/ss-restaurant.jpg',
@@ -48,12 +56,12 @@ const portfolioObj = {
     linkToLive: 'https://damdafayton.github.io/restaurant/',
     linkToSource: 'https://github.com/damdafayton/restaurant',
   }
-};
+];
 
 // CREATE PORTFOLIO CARDS
 const cardContainer = document.querySelector('#my-works > .card-container');
 // Create cards based on the amount of projects
-Object.keys(portfolioObj).forEach(() => {
+portfolioList.forEach(() => {
   cardContainer.innerHTML += (`
     <div class= "card">
       <img alt="screenhost of my work" src="#">
@@ -74,7 +82,7 @@ function techListElementCreator(tech) {
 }
 
 function ulFiller(ul, portfolioOrder) {
-  portfolioObj[portfolioOrder].tech.forEach((newTech) => {
+  portfolioList[portfolioOrder].tech.forEach((newTech) => {
     // console.log('add newTech: ', newTech)
     const listElement = techListElementCreator(newTech);
     ul.appendChild(listElement);
@@ -91,7 +99,7 @@ function portfolioPopUp(e) {
   myWorks.forEach((work, i) => {
     if (e.target.parentElement === work) { n = i; }
   });
-  n += 1; // to adjust for object order
+  // n += 1; // to adjust for object order
 
   // Create link elements
   imgLive = document.createElement('img')
@@ -102,14 +110,14 @@ function portfolioPopUp(e) {
   aLive = document.createElement('a')
   aLive.classList.add('btn-green', 'me-1')
   aLive.target = "_blank"
-  aLive.href = portfolioObj[n].linkToLive
+  aLive.href = portfolioList[n].linkToLive
   aLive.innerText = 'See Live'
   aLive.appendChild(imgLive)
 
   aSource = document.createElement('a')
   aSource.classList.add('btn-green', 'ms-1')
   aSource.target = "_blank"
-  aSource.href = portfolioObj[n].linkToSource
+  aSource.href = portfolioList[n].linkToSource
   aSource.innerText = 'See Source'
   aSource.appendChild(imgSource)
 
@@ -117,20 +125,20 @@ function portfolioPopUp(e) {
   popUpElements.forEach((element) => {
     switch (element.id || element.tagName) {
       case 'popUpImage':
-        element.src = portfolioObj[n].screenshotUrl;
+        element.src = portfolioList[n].screenshotUrl;
         break;
       case 'popUpDescription':
-        element.innerText = portfolioObj[n].description;
+        element.innerText = portfolioList[n].description;
         break;
       case 'popUpTech':
         ulFiller(element, n);
         break;
       case 'SPAN':
         element.innerHTML = '' // reset whatever element was put in during previous fill
-        if (portfolioObj[n].linkToLive) {
+        if (portfolioList[n].linkToLive) {
           element.appendChild(aLive.cloneNode(true))
         }
-        if (portfolioObj[n].linkToSource) {
+        if (portfolioList[n].linkToSource) {
           element.appendChild(aSource.cloneNode(true))
         }
         break;
@@ -144,15 +152,15 @@ function portfolioPopUp(e) {
 }
 
 myWorks.forEach((work, i) => {
-  i += 1;
+  // i += 1;
   const subElements = work.querySelectorAll('*');
   subElements.forEach((element) => {
     switch (element.tagName) {
       case 'IMG':
-        element.src = portfolioObj[i].screenshotUrl;
+        element.src = portfolioList[i].screenshotUrl;
         return 0;
       case 'H3':
-        element.innerText = portfolioObj[i].name;
+        element.innerText = portfolioList[i].name;
         return 0;
       case 'UL':
         ulFiller(element, i);
