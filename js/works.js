@@ -9,20 +9,20 @@ const portfolioList = [
     linkToSource: 'https://github.com/damdafayton/budget-app-rails',
   },
   {
-    name: 'Show My Neighbors',
-    description: 'A SPA built with React, Redux, showing neighboring countries of the visitor.',
-    screenshotUrl: './works/capstone_location_ss-wide.gif',
-    tech: ['HTML', 'CSS', 'JS', 'Bootstrap', 'SCSS', 'React', 'Redux'],
-    linkToLive: 'https://damdafayton-countries.herokuapp.com/',
-    linkToSource: 'https://github.com/damdafayton/who-is-my-neighbor',
-  },
-  {
     name: 'De-fi Token Farm',
     description: 'Yield farming dapp built by Brownie, Python and React where you can stake and un-stake various tokens.',
     screenshotUrl: './works/ss-defi-token-farm.png',
     tech: ['JS', 'TypeScript', 'Bootstrap', 'React', 'Solidity', 'Python', 'Brownie'],
     linkToLive: 'https://defi-token-farm.netlify.app/',
     linkToSource: 'https://github.com/damdafayton/defi-token-farm',
+  },
+  {
+    name: 'Show My Neighbors',
+    description: 'A SPA built with React, Redux, showing neighboring countries of the visitor.',
+    screenshotUrl: './works/capstone_location_ss-wide.gif',
+    tech: ['HTML', 'CSS', 'JS', 'Bootstrap', 'SCSS', 'React', 'Redux'],
+    linkToLive: 'https://damdafayton-countries.herokuapp.com/',
+    linkToSource: 'https://github.com/damdafayton/who-is-my-neighbor',
   },
   {
     name: 'Blog App',
