@@ -1,6 +1,15 @@
 // Portfolio data
 const portfolioList = [
   {
+    name: 'Budget App',
+    description: 'A mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.',
+    screenshotUrl: './works/ss_budget_app_rails.gif',
+    tech: ['Ruby', 'Rails', 'Bootstrap', 'Sass', 'Postgresql', 'RSpec'],
+    linkToLive: 'https://damdafayton-budget.herokuapp.com/',
+    linkToSource: 'https://github.com/damdafayton/budget-app-rails',
+  },
+
+  {
     name: 'Blog App',
     description: 'This Blog app is a classic example of a blog website. And the creation of a full functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.',
     screenshotUrl: './works/ss-rails-blog.png',
