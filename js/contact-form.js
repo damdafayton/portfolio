@@ -13,17 +13,17 @@ function setAlert(alertMessage) {
 contactForm.addEventListener('submit', (e) => {
   if (email.value !== email.value.toLowerCase()) {
     e.preventDefault();
-    setAlert('Use only lower case letters in your email address.')
+    setAlert('Use only lower case letters in your email address.');
   }
-  Array.from(contactForm.elements).forEach(element => {
+  Array.from(contactForm.elements).forEach((element) => {
     if (element.value.includes('test')) {
       e.preventDefault();
-      setAlert('Please don\'t spam me. ;)')
+      setAlert('Please don\'t spam me. ;)');
     }
-  })
+  });
   if (contactForm.message.value.length < 10) {
     e.preventDefault();
-    setAlert('Com\'on you can spam better!')
+    setAlert('Com\'on you can spam better!');
   }
 });
 
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     contactForm.elements.email.value = formData.formEmail;
     contactForm.elements.message.value = formData.formText;
   }
-})
+});
 
 Array.from(contactForm.elements).forEach((element) => {
   if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
