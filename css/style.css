@@ -80,12 +80,6 @@ div > p {
   display: flex !important;
 }
 
-.slide-left {
-  margin-left: 0;
-  transition: margin-left 0.8s;
-  opacity:1;
-}
-
 .body-blur {
   filter: blur(4px);
 }
@@ -125,9 +119,16 @@ header nav > ul {
   z-index: 100;
   padding-top: 5rem;
   padding-left: 1rem;
-  opacity: 0;
-  transition: opacity 0.5s, margin-left 0s 0.5s;
+  /* opacity: 0; */
+  transition: opacity 0.5s 0.2s, margin-left 0.3s;
 }
+
+.slide-left {
+  margin-left: 0;
+  transition: margin-left 0.8s;
+  /* opacity:1; */
+}
+
 header nav > ul li {
   margin: 1.6rem 1.8rem;
   font-weight: 600;
